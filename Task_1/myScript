@@ -1,0 +1,5 @@
+#!/bin/bash
+mkdir ~/Directory1
+mkdir ~/Directory2
+
+echo "My bash script has completed Successfully"
