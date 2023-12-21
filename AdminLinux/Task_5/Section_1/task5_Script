@@ -1,0 +1,20 @@
+#!/bin/bash
+echo "Hello All, Today is " `date`
+echo "This is Section_1 of Task 5 :)"
+
+echo "I will Delete any user/Group with the same name to work Cleanly"
+sudo userdel -r anas_2
+sudo groupdel khamees
+echo " Now I Will Add the user and group again"
+sudo adduser anas_2 
+sudo groupadd khamees
+echo "New user anas_2 created successfully :)"
+echo "New Family Group Created Successfully:)"
+cat /etc/passwd |grep anas_2
+cat /etc/group |grep khamees
+echo "Add new user anas_2 to khamees group"
+
+sudo usermod -aG khamees anas_2
+echo " The users in the khamees group are: "
+members khamees
+

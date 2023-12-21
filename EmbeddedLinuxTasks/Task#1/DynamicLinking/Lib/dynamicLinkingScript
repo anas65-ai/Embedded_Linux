@@ -1,0 +1,16 @@
+rm *.o
+rm *.so
+gcc -c -g -Wall -fPIC addition.c
+gcc -c -g -Wall -fPIC subtraction.c
+gcc -c -g -Wall -fPIC modulus.c
+gcc -c -g -Wall -fPIC multiplication.c
+gcc -c -g -Wall -fPIC division.c
+
+gcc -shared -o liboperation.so addition.o subtraction.o modulus.o multiplication.o division.o 
+
+cd ..
+
+gcc main.c -L./Lib -loperation -o calcOutDynamic -I ./includes
+export LD_LIBRARY_PATH=:/home/anas/EmbeddedLinux/Tasks/EmbeddedLinuxTasks/Task#1/DynamicLinking/Lib
+
+./calcOutDynamic
