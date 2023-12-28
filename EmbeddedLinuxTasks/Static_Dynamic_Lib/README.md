@@ -1,7 +1,5 @@
 ### Table of Contents:
-[**Libraries**](https://github.com/anaskhamees/Embedded_Linux/edit/main/EmbeddedLinuxTasks/Static_Dynamic_Lib/README.md#libraries)
-- [Static Libraries](https://github.com/anaskhamees/Embedded_Linux/edit/main/EmbeddedLinuxTasks/Static_Dynamic_Lib/README.md#1-static-library)
-   - [How to create static library in C](1.1.-How-to-create-static-library-in-C)
+[TOC]
 # Libraries 
 
 A library is like a treasure trove of ready-made code, including functions, variables, and more. It's like a handy toolkit that programmers can use to save time and avoid redoing common tasks and instead of reinventing the wheel. Simply, there is a collection of pre-compiled code which forms a package called library. There are two types of libraries: 
