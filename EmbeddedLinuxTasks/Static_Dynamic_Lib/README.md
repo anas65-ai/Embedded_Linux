@@ -380,12 +380,14 @@ file liboperation.so
 
 
 
+
 |               |                       Static Libraries                       |                      Dynamic Libraries                       |
 | :-----------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |   **Size**    | Object codes are bigger because including the actual code not an address | binary files is smaller because including the addresses of functions |
 |  **Update**   | If there is any change in the code, it must be compile again |  The shared objects can be replaced without compiling again  |
 |   **Time**    | It is faster because does not need additional time to load the library in run time |        consumes more time loading the shared objects         |
 | **Execution** |           does not dependent on any external files           | dependent on the shared library, if not exist ,the execution fails |
+
 
 
 
