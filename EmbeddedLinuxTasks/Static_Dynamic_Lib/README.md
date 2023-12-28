@@ -8,8 +8,8 @@ A library is like a treasure trove of ready-made code, including functions, vari
 ## 1. Static Library 
 
 It is a group of objects files (*.o) that link with the application during linking phase of build process.  The linker copies the code inside the library and merges it to main application to generate executable file and making the program self-contained and not dependent on external libraries at runtime.
+![Untitled Diagram](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/4bb0dc7e-d6ee-458c-8b0f-7a68586b73e0)
 
-![](README.assets/Untitled Diagram.jpg)
 
 ### 1.1. How to create static library in C
 
@@ -119,8 +119,8 @@ gcc -c -Wall -Werror -Wextra *.c
   ```
 
 - The Project hierarchy becomes like that:
+![Untitled Diagram(1)](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/858aadbd-13b3-47c7-90f6-268938aad333)
 
-   ![](README.assets/Untitled Diagram(1).jpg)
 
 - You can open the file using vim and write the code
 
@@ -241,20 +241,20 @@ gcc -c -Wall -Werror -Wextra *.c
   cd ~/calculator/Lib_Src
   gcc -c -Wall -Werror -Wextra *.c
   ```
+![Screenshot from 2023-12-27 18-39-12](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/58853cea-6792-484d-b568-2773dd5e9fef)
 
-  ![Screenshot from 2023-12-27 18-39-12](README.assets/Screenshot from 2023-12-27 18-39-12.png)
 
 - Creating Static Library (its name **operation**) using the object files :
 
   ```
   ar -rcs liboperation.a *.o		    
   ```
+![Screenshot from 2023-12-27 18-41-50](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/3821737f-37b3-4caf-8bac-b5489d7c8187)
 
-  ![Screenshot from 2023-12-27 18-41-50](README.assets/Screenshot from 2023-12-27 18-41-50.png)
 
 - Show the object files included in the static library:
+![Screenshot from 2023-12-27 18-45-56](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/f3d0ac5c-7885-49d4-97c3-9f9497ece1b5)
 
-  ![Screenshot from 2023-12-27 18-45-56](README.assets/Screenshot from 2023-12-27 18-45-56.png)
 
 - Link the static library **(liboperation.a)** with the **main.c** to generate executable application. 
 
@@ -267,12 +267,12 @@ gcc -static main.c  -o Calculator -loperation -L./Lib_Src  -I ./includes
 > - **-l**(L small)        : specify the name of your library after **l** flag without the prefix "lib" and postfix "".a".
 > - **-L** flag              : specify the path of the function source files of the library.
 > - **-I** ( capital)     : specify the path of the header files of the library.
+![Screenshot from 2023-12-27 19-11-00](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/769d45bf-8bb2-434d-94a5-ee6f425382b2)
 
-![Screenshot from 2023-12-27 19-11-00](README.assets/Screenshot from 2023-12-27 19-11-00.png)
 
 - Run the application (Calculator)
 
-![Screenshot from 2023-12-27 22-35-50](README.assets/Screenshot from 2023-12-27 22-35-50.png)
+![Screenshot from 2023-12-27 22-33-34](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/78aa128f-d85e-488c-8a48-140879a0fc98)
 
 
 
@@ -293,8 +293,8 @@ The linking with the application occurs at runtime in the RAM, thanks to the dyn
 
   >- ***c*** 	: compile and assemble but don't link.
   >- ***fPIC***   : Position Independent Code flag is a compiler options that generate code suitable for use in shared libraries ,PIC is a feature that allows a compiled library to be loaded into memory at any address. This is essential for shared libraries because the exact memory location where a library is loaded can vary between different programs and is determined at run time.
+![Screenshot from 2023-12-27 23-56-23](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/4ce38dd5-d258-4045-853c-7ff38114a615)
 
-![Screenshot from 2023-12-27 23-56-23](README.assets/Screenshot from 2023-12-27 23-56-23-1703721363408-1.png)
 
 - Create Dynamic Library using the object files (*.o)
 
@@ -308,21 +308,21 @@ The linking with the application occurs at runtime in the RAM, thanks to the dyn
   > - **operation** : the name of the shared library.
   > - **so**                : postfix stand for **shared object** .
 
-![Screenshot from 2023-12-28 00-01-30](README.assets/Screenshot from 2023-12-28 00-01-30-1703721390492-3.png)
+![Screenshot from 2023-12-28 00-01-30](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/a46c5fea-a505-48c8-849d-a6d36977783f)
 
 ```
 file liboperation.so
 ```
+![Screenshot from 2023-12-28 00-40-59](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/9420aa0b-7a20-4215-a728-b00911001662)
 
-![Screenshot from 2023-12-28 00-40-59](README.assets/Screenshot from 2023-12-28 00-40-59-1703721427040-5.png)
 
 - To show the symbol table of the shared library :
 
   ```
   objdump -T liboperation.so 
   ```
+![Screenshot from 2023-12-28 00-24-07](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/77dbf14b-2ae6-4c2d-b5ff-2bcbc77ddf11)
 
-  ![Screenshot from 2023-12-28 00-24-07](README.assets/Screenshot from 2023-12-28 00-24-07.png)
 
 - You need to  add the location of your dynamic library into the environmental variable **LD_LIBRARY_PATH** so the compiler knows where is  the object codes of the functions you use.
 
@@ -339,8 +339,8 @@ file liboperation.so
     ```
 
     - In the tail of the file write this : export LD_LIBRARY_PATH= your/path/of/library, then save.
+![Screenshot from 2023-12-28 01-37-24](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/453de81c-498e-4537-b75c-cc3d4febae39)
 
-      ![Screenshot from 2023-12-28 01-37-24](README.assets/Screenshot from 2023-12-28 01-37-24-1703721505669-7.png)
 
     ```
     source ~/.bashrc
@@ -359,10 +359,9 @@ file liboperation.so
 ```
 ./CalculatorDynamic
 ```
+![Screenshot from 2023-12-28 01-41-58](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/df368cc5-0965-486e-9b04-0e42396849d5)
 
-![Screenshot from 2023-12-28 01-41-58](README.assets/Screenshot from 2023-12-28 01-41-58-1703721561145-9.png)
-
-![Screenshot from 2023-12-28 01-44-33](README.assets/Screenshot from 2023-12-28 01-44-33-1703721582457-11.png)
+![Screenshot from 2023-12-28 01-44-33](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/2ee1d836-6ee2-44b5-b27d-695ed0a8bfd4)
 
 
 
