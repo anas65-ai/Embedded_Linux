@@ -4,7 +4,7 @@
       - ***How to create static library in C***
       - ***Example (Calculator Application)***
     - **Dynamic Library**
-      - ***How to create static library in C***
+      - ***How to create dynamic library in C***
       - ***Example (Calculator Application)***
     - **The difference between Dynamic and Static Linking**
     - **References**
