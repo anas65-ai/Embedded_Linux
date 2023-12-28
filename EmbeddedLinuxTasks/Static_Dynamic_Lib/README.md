@@ -1,5 +1,13 @@
-### Table of Contents:
-[TOC]
+## Table of Contents:
+  - **Libraries**
+    - **Static Library**
+      - ***How to create static library in C***
+      - ***Example (Calculator Application)***
+    - **Dynamic Library**
+      - ***How to create static library in C***
+      - ***Example (Calculator Application)***
+    - **The difference between Dynamic and Static Linking**
+    - **References**
 # Libraries 
 
 A library is like a treasure trove of ready-made code, including functions, variables, and more. It's like a handy toolkit that programmers can use to save time and avoid redoing common tasks and instead of reinventing the wheel. Simply, there is a collection of pre-compiled code which forms a package called library. There are two types of libraries: 
