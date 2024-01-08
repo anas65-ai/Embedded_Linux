@@ -32,9 +32,9 @@ dd if=/dev/zero of=sd.img bs=1M count=1024
 >
 > - ***count*** :  this sets the number of blocks to copy. In this example, it's set to ***1024***, so `dd` will copy ***1024 blocks*** of 1 megabyte each, resulting in a ***1 Gigabyte file***.
 
-![Screenshot from 2024-01-08 18-01-39](VirtualSDCard.assets/Screenshot from 2024-01-08 18-01-39.png)
+![Screenshot from 2024-01-08 18-01-39](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/6158a0e8-65e7-429c-8030-55cf365ba186)
 
-![Untitled Diagram](VirtualSDCard.assets/Untitled Diagram.webp)
+
 
 #### 2.2. Configure the Partitions Table of the Virtual SD card
 
