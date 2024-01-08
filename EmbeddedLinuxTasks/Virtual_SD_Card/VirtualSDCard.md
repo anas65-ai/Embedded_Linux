@@ -132,27 +132,31 @@ cfdisk sd.img
 
 - Select the partition size 800M.
 
-  ![Screenshot from 2024-01-08 18-21-16](VirtualSDCard.assets/Screenshot from 2024-01-08 18-21-16.png)
+  ![Screenshot from 2024-01-08 18-21-16](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/8338049d-f9ec-4d3c-9f19-a5796da94957)
+
 
 - Then select the type of **rootfs** partition (should be extentend) and press **Enter** :
 
-​	![Screenshot from 2024-01-08 18-21-25](VirtualSDCard.assets/Screenshot from 2024-01-08 18-21-25.png)
+​	![Screenshot from 2024-01-08 18-21-25](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/0214e140-6a86-4b4f-ab84-16c7f842eb74)
+
 
 - Then Press on **Type** option to select file system type for rootfs partition:
 
-   ![Screenshot from 2024-01-08 18-21-44](VirtualSDCard.assets/Screenshot from 2024-01-08 18-21-44.png)
+   ![Screenshot from 2024-01-08 18-21-44](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/9aae647a-7f5d-41ad-ada3-4396145c010f)
 
 - Select Linux file system type (Ext4)
 
-  ![Screenshot from 2024-01-08 18-21-59](VirtualSDCard.assets/Screenshot from 2024-01-08 18-21-59.png)
+  ![Screenshot from 2024-01-08 18-21-59](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/7a854c48-662f-4764-8c97-c55239f28d27)
+
 
 - Then save the partition configuration by press on **Write option** and then **Quite** :
 
-![Screenshot from 2024-01-08 18-22-08](VirtualSDCard.assets/Screenshot from 2024-01-08 18-22-08.png)
+![Screenshot from 2024-01-08 18-22-08](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/c0b71850-c50c-40ce-9e98-a20055bdec4a)
 
-![Screenshot from 2024-01-08 18-22-28](VirtualSDCard.assets/Screenshot from 2024-01-08 18-22-28.png)
+![Screenshot from 2024-01-08 18-22-28](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/8201df15-c136-4f51-a67c-d01083064e3c)
 
-![Screenshot from 2024-01-08 18-23-00](VirtualSDCard.assets/Screenshot from 2024-01-08 18-23-00.png)
+
+![Screenshot from 2024-01-08 18-23-00](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/a525f6f5-53bd-4593-aa56-a1da9325b435)
 
 
 
@@ -164,7 +168,8 @@ Till now we have the **sd.img**  as a regular file but we want to make ***sd.img
 
 The loop driver in Linux is a kernel module that allows a file to be  mapped as a block device.                     The loop driver allows us to emulate block devices using regular files. This is  useful for testing and development when you want  to simulate the behavior of a physical storage device (such as an SD  card, USB drive, or hard disk) without having the physical hardware.
 
-![Untitled Diagram2](VirtualSDCard.assets/Untitled Diagram2.jpg)
+![Untitled Diagram2](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/dd414a66-febb-4705-aa0a-6e447196fcbb)
+
 
 - Run the command bellow to do that :
 
@@ -178,8 +183,8 @@ The loop driver in Linux is a kernel module that allows a file to be  mapped as 
   > - **show flag ** : display the name of the loop device that is associated.
   > - ***partscan***    : scan the image for partitions. This option is useful when the image  contain multiple partition, and you want the loop device to be associated with all of them.
   > - ***sd.img***        : The name of the file (in this case, `sd.img`) that you want to attach as a block device using a loop device.
+![image-20240108224103106](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/a88c646e-c147-4229-a03e-a2115fbda798)
 
-![image-20240108224103106](VirtualSDCard.assets/image-20240108224103106.png)
 
 - You can show the loop which associated with your virtual SD card by run bellow commands : 
 
@@ -192,7 +197,8 @@ losetup -a | grep <loopX>
 lsblk | grep <loopX>
 ```
 
-![Screenshot from 2024-01-08 22-44-23](VirtualSDCard.assets/Screenshot from 2024-01-08 22-44-23.png)
+![Screenshot from 2024-01-08 22-44-23](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/ea75d2b0-f1f1-4bbb-977f-a77be973e71e)
+
 
 - We should assign the path of device loop which associated with virtual SD card (block device) to simplicity and re-usability in the next steps:
 
@@ -200,7 +206,8 @@ lsblk | grep <loopX>
   export DISK=/dev/loop<x>
   ```
 
-  ![image-20240108225546951](VirtualSDCard.assets/image-20240108225546951.png)
+  ![image-20240108225546951](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/1c31f683-8267-4ac0-874c-0d0cffbecd67)
+
 
 ##### 2.3.2. Partitions Table Formating
 
@@ -216,7 +223,8 @@ sudo mkfs.vfat -F 16 -n boot ${DISK}p1
 > - `-n boot`: Sets the volume label to "boot"
 > - `${DISK}p1`: Represents the first partition on the block device, using the variable `DISK` that you've set.
 
-![image-20240108230550299](VirtualSDCard.assets/image-20240108230550299.png)
+![image-20240108230550299](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/22e8947c-2b91-4873-9ca0-4b410d00648d)
+
 
 And the  ***rootfs*** to be ***Ext4*** type:
 
@@ -229,7 +237,8 @@ sudo mkfs.ext4 -L rootfs ${DISK}p2
 > - `-L rootfs`: Sets the volume label to "rootfs" .
 > - `${DISK}p2`: Represents the second partition on the block device, using the variable `DISK` that you've set.
 
-![image-20240108230846125](VirtualSDCard.assets/image-20240108230846125.png)
+![image-20240108230846125](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/c5e13201-4a15-4704-800b-831b9a49a7e5)
+
 
 - To make sure that the partitions formating done correctly, run this command :
 
@@ -244,7 +253,8 @@ sudo mkfs.ext4 -L rootfs ${DISK}p2
   >   - `FSTYPE`: The filesystem type of the partition.
   > - **`${DISK}`**: This is a variable that represents the block device path. 
 
-![Screenshot from 2024-01-08 23-13-26](VirtualSDCard.assets/Screenshot from 2024-01-08 23-13-26.png)
+![Screenshot from 2024-01-08 23-13-26](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/06c70d06-d901-40c3-9c20-5c9397c7ee64)
+
 
 Congratulations ! , We created a Virtual SD card has two partitions first, boot partition and second rootfs partition. 
 
