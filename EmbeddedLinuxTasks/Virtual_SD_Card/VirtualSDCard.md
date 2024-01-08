@@ -238,3 +238,11 @@ sudo mkfs.ext4 -L rootfs ${DISK}p2
 ![Screenshot from 2024-01-08 23-13-26](VirtualSDCard.assets/Screenshot from 2024-01-08 23-13-26.png)
 
 Congratulations ! , We created a Virtual SD card has two partitions first, boot partition and second rootfs partition. 
+
+
+
+## 3. References 
+
+- https://github.com/FadyKhalil/EmbeddedLinux/tree/main/3-Uboot
+- https://dzone.com/articles/loop-device-in-linux
+- https://www.easeus.com/knowledge-center/primary-vs-extended-partition.html
