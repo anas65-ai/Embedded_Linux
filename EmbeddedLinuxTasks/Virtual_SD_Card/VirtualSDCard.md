@@ -34,6 +34,7 @@ dd if=/dev/zero of=sd.img bs=1M count=1024
 
 ![Screenshot from 2024-01-08 18-01-39](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/6158a0e8-65e7-429c-8030-55cf365ba186)
 
+![Untitled Diagram](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/ecd81d32-3650-42d3-82e4-ecd116dd7993)
 
 
 #### 2.2. Configure the Partitions Table of the Virtual SD card
@@ -61,15 +62,18 @@ cfdisk sd.img
 >
 > - `sd.img`: This is the argument passed to `cfdisk`. It specifies the disk image file on which you want to perform partitioning. In this case, the disk image file named `sd.img`.
 
-![Screenshot from 2024-01-08 18-02-41](VirtualSDCard.assets/Screenshot from 2024-01-08 18-02-41.png)
+![Screenshot from 2024-01-08 18-02-41](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/cf9dbed1-6442-43d7-9b63-ff08a9243edf)
+
 
 - User interface window will open :
 
-  ![Screenshot from 2024-01-08 18-03-11](VirtualSDCard.assets/Screenshot from 2024-01-08 18-03-11.png)
+  ![Screenshot from 2024-01-08 18-03-11](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/6ac64528-2318-4557-88f1-9eaf8b10b9c6)
+
 
 - Select **dos**  by keyboard **arrows** and press ***Enter*** , then another configuration window will open :
 
-  ![Screenshot from 2024-01-08 18-03-48](VirtualSDCard.assets/Screenshot from 2024-01-08 18-03-48.png) 
+  ![Screenshot from 2024-01-08 18-03-48](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/d0a84aab-57a1-4029-921f-51e8612827c1)
+
 
 - Select ***New*** to create new partition and press ***Enter*** , then select the *partition size*  and press ***Enter***.
 
@@ -77,45 +81,50 @@ cfdisk sd.img
 
 - Select the Size of boot partition (200 M) and press ***Enter***:
 
-![Untitled Diagram1](VirtualSDCard.assets/Untitled Diagram1.jpg) 
+![Untitled Diagram1](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/d4667c82-4603-497e-9385-c1a8ceaf2039)
 
 
 
 - Then select the type of boot partition (it should be ***primary*** type to make it bootable partition) , usually the primary partition holds the operating system.
 
-  ![Screenshot from 2024-01-08 18-14-31](VirtualSDCard.assets/Screenshot from 2024-01-08 18-14-31.png)
+ ![Screenshot from 2024-01-08 18-14-31](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/ac281569-029f-4127-8826-50c6f9f08ef9)
 
   
 
 - Make sure you select ***Bootable*** option for this partition (an Asterisk * will appear in **Boot** option) :
 
-  ![Screenshot from 2024-01-08 18-17-10](VirtualSDCard.assets/Screenshot from 2024-01-08 18-17-10.png)
+![Screenshot from 2024-01-08 18-17-10](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/9e55358f-b20b-4d7b-b3d9-46e45f4c0e9b)
 
 - Then Press on **Type** option to select file system type for boot partition ( ***FAT16*** )  :
 
-  ![Screenshot from 2024-01-08 18-17-23](VirtualSDCard.assets/Screenshot from 2024-01-08 18-17-23.png)
+  ![Screenshot from 2024-01-08 18-17-23](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/cbe60457-1040-4dbb-b3b1-64cb28fcf65b)
+
 
 - Search for **FAT16** file system type and press **Enter** :
 
-  ![Screenshot from 2024-01-08 18-17-47](VirtualSDCard.assets/Screenshot from 2024-01-08 18-17-47.png)
+  ![Screenshot from 2024-01-08 18-17-47](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/f0337c29-e652-4d31-ba24-36018ecde764)
+
 
 - Save the configuration of ***boot partition*** by select **Write** option as bellow :
 
-  ![Screenshot from 2024-01-08 18-19-21](VirtualSDCard.assets/Screenshot from 2024-01-08 18-19-21.png)
+  ![Screenshot from 2024-01-08 18-19-21](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/b7efc439-284a-49e0-a6c2-777819c28e13)
 
   - There is a question will appear *" Are you sure you want to write the partition table to disk"* , replay by writing ***"Yes"*** and press **Enter** .
 
-    ![Screenshot from 2024-01-08 18-19-43](VirtualSDCard.assets/Screenshot from 2024-01-08 18-19-43.png)
+    ![Screenshot from 2024-01-08 18-19-43](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/0ce2153d-584c-43d3-8c55-1487bc4c4942)
+
 
 
 
 - Congratulations ! , now you created a new partition has a size of 200Mb
 
-  ![Screenshot from 2024-01-08 18-20-33](VirtualSDCard.assets/Screenshot from 2024-01-08 18-20-33.png)
+  ![Screenshot from 2024-01-08 18-20-33](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/8a3ca99b-987a-4731-8984-5fcba5a7758a)
+
 
 - Press ***Quit*** option to exist and create a new partition.
 
-​		![Screenshot from 2024-01-08 18-21-08](VirtualSDCard.assets/Screenshot from 2024-01-08 18-21-08.png)	
+​		![Screenshot from 2024-01-08 18-21-08](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/43799ecc-bca9-4bf6-a633-fc572e129f4d)
+
 
 ##### 2.2.2.  Create the ***rootfs*** (root file system) partition 
 
