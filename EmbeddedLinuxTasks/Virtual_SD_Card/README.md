@@ -1,6 +1,6 @@
 -------------------------------------------------------------------------------------------------------------------------
 ## Table of Contents
--------------------------------------------------------------------------------------------------------------------------
+
 - [**How to create SD image in Linux (Virtual SD)**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/VirtualSDCard.md#how-to-create-sd-image-in-linux-virtual-sd)
   - [**1. Task Definition**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/VirtualSDCard.md#1-task-definition)
   - [**2. Steps of creating virtual SD card**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/VirtualSDCard.md#2-steps-of-creating-virtual-sd-card)
