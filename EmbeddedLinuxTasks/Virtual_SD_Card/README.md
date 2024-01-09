@@ -2,7 +2,7 @@
 ## Table of Contents
 
 - [**How to create SD image in Linux (Virtual SD)**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#how-to-create-sd-image-in-linux-virtual-sd)
-  - [**1. Task Definition**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/VirtualSDCard.md#1-task-definition)
+  - [**1. Task Definition**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#1-task-definition)
   - [**2. Steps of creating virtual SD card**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#2-steps-of-creating-virtual-sd-card)
       - [2.1. Create a file called "sd.img" has a size of 1 GB (for example) filled by zeros.](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#21-create-a-file-called-sdimg-has-a-size-of-1-gb-for-example-filled-by-zeros)
       - [2.2. Configure the Partitions Table of the Virtual SD card](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#22-configure-the-partitions-table-of-the-virtual-sd-card)
