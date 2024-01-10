@@ -196,7 +196,7 @@ The loop driver in Linux is a kernel module that allows a file to be  mapped as 
   > - ***sudo***            : run the command with superuser privileges.
   > - ***losetup***       : the loop device setup command.
   > - ***f   flag***         : ***find*** the first available loop device.
-  > - **show flag ** : display the name of the loop device that is associated.
+  > - ***show flag*** : display the name of the loop device that is associated.
   > - ***partscan***    : scan the image for partitions. This option is useful when the image  contain multiple partition, and you want the loop device to be associated with all of them.
   > - ***sd.img***        : The name of the file (in this case, `sd.img`) that you want to attach as a block device using a loop device.
 ![image-20240108224103106](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/a88c646e-c147-4229-a03e-a2115fbda798)
