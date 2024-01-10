@@ -8,9 +8,9 @@
       - [2.2. Configure the Partitions Table of the Virtual SD card](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#22-configure-the-partitions-table-of-the-virtual-sd-card)
           - [2.2.1. Create the boot partition](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#221--create-the-boot-partition)
           - [2.2.2. Create the rootfs (root file system) partition](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#222--create-the-rootfs-root-file-system-partition)
-        - [2.3. Emulate the sd.img as a Storage Device (SD card)](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#23-emulate-the-sdimg-as-a-storage-device-sd-card)
-            - [2.3.1. Loop Device Driver](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#231-loop-device-driver)
-            - [2.3.2. Partitions Table Formating](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#232-partitions-table-formating)
+      - [2.3. Emulate the sd.img as a Storage Device (SD card)](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#23-emulate-the-sdimg-as-a-storage-device-sd-card)
+          - [2.3.1. Loop Device Driver](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#231-loop-device-driver)
+          - [2.3.2. Partitions Table Formating](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#232-partitions-table-formating)
   - [**3. References**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Virtual_SD_Card/README.md#3-references)
 
 -------------------------------------------------------------------------------------------------------------------------
