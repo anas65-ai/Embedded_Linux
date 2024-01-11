@@ -4,8 +4,6 @@
 
 
 
-
-
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 # U-boot (Bootloader)
@@ -396,3 +394,10 @@ qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel u-boot -sd sd.img
 
 
 **Congratulation ! , the U-boot is running :)**  
+
+### 4. References 
+
+1. https://docs.u-boot.org/en/latest/
+2. https://github.com/FadyKhalil/EmbeddedLinux/tree/main/3-Uboot#vexpress-a9-qemu
+3. https://github.com/PacktPublishing/Mastering-Embedded-Linux-Programming-Third-Edition
+4. https://github.com/u-boot/u-boot
