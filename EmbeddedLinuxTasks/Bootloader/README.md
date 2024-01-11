@@ -1,6 +1,17 @@
 ## Table of Contents 
-
-
+- ### [U-boot (Bootloader)](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#u-boot-bootloader)
+    - [**1. Booting Sequence**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#1-booting-sequence)
+        - [1.1. Computer (x86) Booting sequence](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#11-computer-x86-booting-sequence)
+        - [1.2. BeagleBone Booting Sequence](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#12-beaglebone-booting-sequence)
+    - [**2. Install U-boot**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#2-install-u-boot)
+        - [2.4. U-boot Machine Configurations](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#24-u-boot-machine-configurations)
+        - [2.5. U-boot Configurations](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#25-u-boot-configurations)
+        - [2.6. Build U-boot](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#26-build-u-boot)
+    - [**3. Test U-boot over Vexpress-a9 machine using Qemu emulator**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#3-test-u-boot-over-vexpress-a9-machine-using-qemu-emulator)
+        - [3.1. Install Qemu](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#31-install-qemu)
+        - [3.2. Run qemu with Emulated SD card](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#32-run-qemu-with-emulated-sd-card)
+        - [3.3. Booting](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#33-booting)
+   - [**4. References**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#4-references)
 
 
 
