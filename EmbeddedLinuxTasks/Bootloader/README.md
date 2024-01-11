@@ -165,7 +165,7 @@ A user interface window will open , customize U-Boot for your specific board. Yo
 
  
 
-- **But there are mandatory option must be selected** :
+- **But there are mandatory options must be selected** :
 
   
 
