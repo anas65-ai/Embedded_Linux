@@ -189,22 +189,6 @@ A user interface window will open , customize U-Boot for your specific board. Yo
 
   > `editenv` is a U-Boot command that allows the user to interactively edit the U-Boot environment variables.
   > - Select **Environment commands** :
-  >   ![Screenshot from 2024-01-11 06-47-43](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/fb8bc8fe-be69-44fc-9af7-77c154f55dc9)
-  >   - Then Select **editenv**
-  >     ![Screenshot from 2024-01-11 06-53-25](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/fd07192c-4c10-4c51-83d9-46685c1a5672)
-
-
-
-  - Select return to the home menu and Select ***Command line interface*** :
-
-    ![Screenshot from 2024-01-11 06-42-08](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/fe535b3d-b73f-41a9-8401-5618d456c0e6)
-
-
-  - Then select ***shell prompt***  to appears "ITI_INTAKE44=>":
-
-    ![image-20240111144553701](README.assets/image-20240111144553701.png)
-
-  - Select ***Environment commands*** :
 
 ![Screenshot from 2024-01-11 06-47-43](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/896a6062-721d-4932-9b76-ca3623ce8142)
 
@@ -219,6 +203,17 @@ A user interface window will open , customize U-Boot for your specific board. Yo
   -  ***Select Enviroments*** and then make surename of FAT file is ***uboot.env***:
 
     ![image-20240111141317596](README.assets/image-20240111141317596.png)
+
+- [x] Configure **shell prompt**
+      
+  - Select return to the home menu and Select ***Command line interface*** :
+
+    ![Screenshot from 2024-01-11 06-42-08](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/fe535b3d-b73f-41a9-8401-5618d456c0e6)
+
+
+  - Then select ***shell prompt***  to appears "ITI_INTAKE44=>":
+
+    ![image-20240111144553701](README.assets/image-20240111144553701.png)
 
 - [x] Unset support of **Flash** .
 
