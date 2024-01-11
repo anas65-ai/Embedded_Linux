@@ -188,6 +188,12 @@ A user interface window will open , customize U-Boot for your specific board. Yo
 - [x]  Support **editenv**.
 
   > `editenv` is a U-Boot command that allows the user to interactively edit the U-Boot environment variables.
+  > - Select **Environment commands** :
+  >   ![Screenshot from 2024-01-11 06-47-43](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/fb8bc8fe-be69-44fc-9af7-77c154f55dc9)
+  >   - Then Select **editenv**
+  >     ![Screenshot from 2024-01-11 06-53-25](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/fd07192c-4c10-4c51-83d9-46685c1a5672)
+
+
 
   - Select return to the home menu and Select ***Command line interface*** :
 
