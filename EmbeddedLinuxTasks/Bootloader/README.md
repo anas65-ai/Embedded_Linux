@@ -55,8 +55,8 @@ git clone git@github.com:u-boot/u-boot.git
 >   - **`u-boot/u-boot.git`:** This part specifies the path to the repository on GitHub. In this case, it points to the U-Boot repository, which is named "u-boot.git." The format is `username/repo`.
 >
 > So, when you run this command, Git will connect to the GitHub repository at `git@github.com:u-boot/u-boot.git`, download all the files, and set up a local copy on your machine. The local copy will be placed in a directory named "u-boot," and you can then navigate into that directory to work with the cloned repository.
+![Screenshot from 2024-01-11 03-17-20](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/914f2ec4-3d2a-4f5d-b72e-ff007185a11f)
 
-![](/home/anas/Pictures/Screenshots/Screenshot from 2024-01-11 03-17-20.png)
 
 ##### 2.2. Go to U-boot directory
 
@@ -73,7 +73,8 @@ git checkout v2022.07
 >- **`git checkout`:** This Git command is used for switching between branches or checking out specific  branches.
 >- **`v2022.07`:** This is the tag or commit identifier you are checking out. In Git, tags are often used to mark specific releases or versions of a project. In this context, `v2022.07`refers to the U-Boot release version from July 2022.
 
-![image-20240111032950957](/home/anas/snap/typora/86/.config/Typora/typora-user-images/image-20240111032950957.png)
+![Screenshot from 2024-01-11 03-29-46](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/6b57bd71-7973-4bf3-ab28-cbad5af6b4ea)
+
 
 ##### 2.4. U-boot Machine Configurations
 
@@ -89,7 +90,7 @@ ls configs/ | grep [your machine]
 
 
 
-![Home Diagram](/home/anas/Home Diagram.jpg)
+![Home Diagram](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/60198c4f-00ae-4601-ab45-60fc4de51829)
 
 - **In my case I use Vexpress Cortex A9 (Qemu Emulator)**
 
@@ -97,7 +98,8 @@ ls configs/ | grep [your machine]
 ls configs/ | grep vexpress_ca9x4_defconfig
 ```
 
-![image-20240111034937666](/home/anas/snap/typora/86/.config/Typora/typora-user-images/image-20240111034937666.png)
+![Screenshot from 2024-01-11 03-49-26](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/c1829829-8b6d-45b2-986c-044b66afb4bc)
+
 
 - Set the cross compiler into environment variables to enable the U-boot to use it
 
@@ -131,8 +133,8 @@ export ARCH=arm
 ```
 
 >Specify the architecture of the target to be ARM architecture 
+![Screenshot from 2024-01-11 05-05-06](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/f8f1fb8c-944e-41ad-a4d7-b1833362e4f9)
 
-![Screenshot from 2024-01-11 05-05-06](README.assets/Screenshot from 2024-01-11 05-05-06.png)
 
 - Use the default configurations of ARM Vexpress Cortex A9
 
@@ -140,11 +142,12 @@ export ARCH=arm
   make vexpress_ca9x4_defconfig
   ```
 
-  ![Screenshot from 2024-01-11 05-05-25](README.assets/Screenshot from 2024-01-11 05-05-25.png)
+ ![Screenshot from 2024-01-11 05-05-25](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/2ad97c5f-5bbe-46b6-9c9b-ad2c49bb4b22)
 
 > If you faced this error when run the above command :
 >
-> ![Screenshot from 2024-01-11 04-26-40](README.assets/Screenshot from 2024-01-11 04-26-40.png)
+> ![Screenshot from 2024-01-11 04-26-40](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/48d547dd-798e-4177-bbd9-3b64e4700a8c)
+
 >
 > [SOLVED] : select the correct path of the cross compiler of arm
 
@@ -188,7 +191,8 @@ A user interface window will open , customize U-Boot for your specific board. Yo
 
   - Select return to the home menu and Select ***Command line interface*** :
 
-    ![Screenshot from 2024-01-11 06-42-08](README.assets/Screenshot from 2024-01-11 06-42-08.png)
+    ![Screenshot from 2024-01-11 06-42-08](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/fe535b3d-b73f-41a9-8401-5618d456c0e6)
+
 
   - Then select ***shell prompt***  to appears "ITI_INTAKE44=>":
 
@@ -196,7 +200,7 @@ A user interface window will open , customize U-Boot for your specific board. Yo
 
   - Select ***Environment commands*** :
 
-    ![Screenshot from 2024-01-11 06-47-43](README.assets/Screenshot from 2024-01-11 06-47-43.png)
+![Screenshot from 2024-01-11 06-47-43](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/896a6062-721d-4932-9b76-ca3623ce8142)
 
   - Select ***editenv***  and ***saveenv*** :
 
@@ -218,11 +222,11 @@ A user interface window will open , customize U-Boot for your specific board. Yo
 
     - Select  ***Environment*** :
 
-      ![Screenshot from 2024-01-11 14-07-24](README.assets/Screenshot from 2024-01-11 14-07-24.png)
+![Screenshot from 2024-01-11 14-07-24](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/a69e3619-c8e8-4993-ab1b-047a1c204d88)
 
   - Un select  ***Environment in flash memory*** :
 
-    ![Screenshot from 2024-01-11 14-07-44](README.assets/Screenshot from 2024-01-11 14-07-44.png)
+![Screenshot from 2024-01-11 14-07-44](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/f4e6cb93-755d-42d8-86c7-e3dd82f84da7)
 
 - [x] Support **FAT file system** 
 
@@ -258,37 +262,37 @@ A user interface window will open , customize U-Boot for your specific board. Yo
 
   - Select ***Device and partition for where to store the environment in FAT*** :
 
-    ![Screenshot from 2024-01-11 14-54-59](README.assets/Screenshot from 2024-01-11 14-54-59.png)
+![Screenshot from 2024-01-11 14-54-59](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/fa0fcf86-624c-447e-80a8-4425ef852ecf)
 
     -  Then  **Write 0 : 1 ** :
 
-      ![Screenshot from 2024-01-11 14-55-05](README.assets/Screenshot from 2024-01-11 14-55-05.png)
+![Screenshot from 2024-01-11 14-55-05](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/c07b0ffe-7791-4d11-8ed5-d9aaeb1e6070)
 
 - [x] Configure The time delay to Auto boot
 
   - Select  ***Boot options*** 
 
-    ![Screenshot from 2024-01-11 16-20-25](README.assets/Screenshot from 2024-01-11 16-20-25.png)
+![Screenshot from 2024-01-11 16-20-25](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/8e91cb4d-e20c-40bc-b32a-126744002fbe)
 
   - Select ***Auto boot*** option and select you preferred time delay ( ***5 seconds*** )
 
-    ![Screenshot from 2024-01-11 16-22-56](README.assets/Screenshot from 2024-01-11 16-22-56.png)
+![Screenshot from 2024-01-11 16-22-56](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/b51924dd-fc2c-4ff6-9a15-bc815f805794)
 
-  ![Screenshot from 2024-01-11 16-23-04](README.assets/Screenshot from 2024-01-11 16-23-04.png)
+![Screenshot from 2024-01-11 16-23-04](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/7944a760-d4fa-4519-9db1-909a41ec4005)
 
 - [x] Configure ***bootcmd value*** to print default value on the screen when booting :
 
   - Select ***Boot options*** 
 
-    ![Screenshot from 2024-01-11 16-22-48](README.assets/Screenshot from 2024-01-11 16-22-48.png)
+![Screenshot from 2024-01-11 16-22-48](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/923f581c-e254-4f02-b5cf-eaafd7affb58)
 
 - Then Write which you want (in my case "from Anas to world, helloooooo")
 
-  ![Screenshot from 2024-01-11 16-20-38](README.assets/Screenshot from 2024-01-11 16-20-38.png)
+![Screenshot from 2024-01-11 16-20-38](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/631c99c2-eb3e-49ac-bbb5-a2fa116c9d3b)
 
 - Remove the written commands and rewrite which you want:
 
-  ![Screenshot from 2024-01-11 16-25-52](README.assets/Screenshot from 2024-01-11 16-25-52.png)
+![Screenshot from 2024-01-11 16-25-52](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/dfbe5678-7f2a-43af-b6e7-06f61b584f00)
 
 - **Congratulations ! , the all configurations are DONE **
 
@@ -317,11 +321,11 @@ make
 
   - You will see the building process like that :
 
-    ![Screenshot from 2024-01-11 15-32-46](README.assets/Screenshot from 2024-01-11 15-32-46.png)
+![Screenshot from 2024-01-11 15-32-46](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/792ca035-3ece-432f-abf7-85c6dcf595e5)
 
   - Warnings messages may appears [ignore it] :
 
-    ![Screenshot from 2024-01-11 15-34-18](README.assets/Screenshot from 2024-01-11 15-34-18.png)
+![Screenshot from 2024-01-11 15-34-18](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/c797b015-cc33-47db-a542-6cf72d96fe68)
 
 ##### 3. Test *U-boot* over *Vexpress-a9* machine using *Qemu* emulator
 
@@ -396,11 +400,11 @@ qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel path/u-boot -sd path/s
 qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel u-boot -sd sd.img
 ```
 
-![Untitled Diagram55](README.assets/Untitled Diagram55.jpg)
+![Untitled Diagram55](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/52419c1a-b7ca-4fb5-b34d-254ae2469d9a)
 
 ##### 3.3. Booting 
 
-![Screenshot from 2024-01-11 16-27-20](README.assets/Screenshot from 2024-01-11 16-27-20.png)
+![Screenshot from 2024-01-11 16-27-20](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/33ee006e-a33d-432e-810d-4d51f818ed30)
 
 
 
