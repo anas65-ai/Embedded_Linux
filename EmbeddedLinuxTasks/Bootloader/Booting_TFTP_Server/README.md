@@ -3,7 +3,7 @@
 
 
 ## Table of Contents 
-  ### Boot from ***tftp*** Server
+  [### Boot from ***tftp*** Server](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#booting-from-tftp-server)
   - [**1. What is the Server machine**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#1-what-is-the-server-machine)
   - [**2. What is TFTP**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#2-what-is-tftp)
     - [2.1. Benefits of booting from the Server](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#21-benefits-of-booting-from-the-server)
@@ -26,6 +26,7 @@
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -387,7 +388,7 @@ After the bootloader application run , we will use some of U-boot command to set
 saveenv
 ```
 
-#### 4.3.  Loading the files from Server or SD card to target RAM
+#### 4.3.  Loading the files from the TFTP Server or SD card to target RAM
 
 - We can the board information and the ram start address by running this command below :
 
