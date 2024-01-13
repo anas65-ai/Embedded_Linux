@@ -3,14 +3,34 @@
 
 
 ## Table of Contents 
-
+  ### Boot from ***tftp*** Server
+  - [**1. What is the Server machine**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#1-what-is-the-server-machine)
+  - [**2. What is TFTP**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#2-what-is-tftp)
+    - [2.1. Benefits of booting from the Server](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#21-benefits-of-booting-from-the-server)
+    - [2.2. Booting from the server prerequisites](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#22-booting-from-the-server-prerequisites)
+  - [**3. Install TFTP Package on Linux (Computer)**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#3-install-tftp-package-on-linux-computer)
+    - [3.1. Install tftp package on linux](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#31-install-tftp-package-on-linux)
+    - [3.2. Connect the Server (computer) with the target (qemu)](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#32--connect-the-server-computer-with-the-target-qemu)
+        - [3.2.1. Server (computer) IP Address](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#321-server-computer-ip-address)
+        - [3.2.2. The script of Server network interface (TAP)](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#322-the-script-of-server-network-interface-tap)
+        - [3.2.3. The IP Address of Target (qemu) network interface (NIC) .](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#323-the-ip-address-of-target-qemu-network-interface-nic-)
+  - [**4. Test the Connection between the server and qemu**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#4-test-the-connection-between-the-server-and-qemu)
+    - [4.1. Run Qemu](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#41-run-qemu)
+    - [4.2. Set U-boot environment variables](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#42--set-u-boot-environment-variables)
+    - [4.3. Loading the files from Server or SD card to target RAM](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#43--loading-the-files-from-server-or-sd-card-to-target-ram)
+      - [4.3.1. Loading the files ( Zimage and hardware.dbt which I created them above)](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#431-loading-the-files--zimage-and-hardwaredbt-which-i-created-them-above)
+  - [**5. References**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#5-references) 
+    
+    
+    
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
-# Booting from TFTP Server
+
+# Booting from TFTP Server 
 
 As we discussed before about the U-boot [Here](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader#u-boot-bootloader-1)  and booting form SD Card, now we will boot form TFTP server.
 
