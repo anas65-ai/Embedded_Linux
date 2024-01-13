@@ -3,7 +3,6 @@
 
 
 ## Table of Contents 
-  [### Boot from ***tftp*** Server](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#booting-from-tftp-server)
   - [**1. What is the Server machine**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#1-what-is-the-server-machine)
   - [**2. What is TFTP**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#2-what-is-tftp)
     - [2.1. Benefits of booting from the Server](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Bootloader/Booting_TFTP_Server#21-benefits-of-booting-from-the-server)
