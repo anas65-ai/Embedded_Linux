@@ -1,4 +1,21 @@
 ## Table of Contents 
+ [**Kernel**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#kernel)
+ - [**1. Linux Kernel**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#1-linux-kernel)
+    - [1.1. Linux Kernel Architecture](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#11-linux-kernel-architecture)
+ - [**2. System Calls**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#2-system-calls)
+    - [2.1. System call workflow](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#21-system-call-workflow)
+    - [2.2. Examples of System Calls](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#22-examples-of-system-calls)
+ - [**3. Install Linux Kernel**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#3-install-linux-kernel)
+    - [3.1. Download Linux Kernel](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#31-download-linux-kernel)
+    - [3.2. Linux Kernel Configuration](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#32-linux-kernel-configuration)
+    - [3.3. Linux Kernel Modules](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#33-linux-kernel-modules)
+       - [3.3.1. Compile Dynamic Kernel Modules](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#331-compile-dynamic-kernel-modules)
+ - [**4. Boot the Kernel from TFTP server**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#4-boot-the-kernel-from-tftp-server)
+    - [4.1. Vexpress board (target) over Qemu Emulator](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#41--vexpress-board-target-over-qemu-emulator)
+    - [4.2. Start Qemu to boot on U-boot](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#42-start-qemu-to-boot-on-u-boot)
+    - [4.3. Boot The zImage (my Kernel Image) and Vexpress DTB file](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#43-boot-the-zimage-my-kernel-image-and-vexpress-dtb-file)
+ - [**5. References**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#5-references)
+   
 
 
 
