@@ -450,7 +450,7 @@ sudo qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel u-boot -sd sd.img
   setenv Zimag_RAM_Add 60000000
   ```
 
-  >- IMP note : Don't Select near addresses (such as 60000000 and 65000000) because the DTB will be overwritten on zImage in the RAM.
+  >- IMP note : Don't Select near addresses (such as 60000000 and 60000020) because the DTB will be overwritten on zImage in the RAM.
   >
   >- Make sure that the loading addresses and sizes are aligned properly, and that there is no overlap between the zImage and DTB file memory  regions.
   >
