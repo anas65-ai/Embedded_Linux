@@ -450,7 +450,7 @@ sudo qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel u-boot -sd sd.img
   setenv Zimag_RAM_Add 60000000
   ```
 
-  >- IMP note : Don't Select near addresses (such as 60000000 and 6000020) because the DTB will be overwritten on zImage in the RAM.
+  >- IMP note : Don't Select near addresses (such as 60000000 and 65000000) because the DTB will be overwritten on zImage in the RAM.
   >
   >- Make sure that the loading addresses and sizes are aligned properly, and that there is no overlap between the zImage and DTB file memory  regions.
   >
@@ -464,7 +464,7 @@ sudo qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel u-boot -sd sd.img
   saveenv
   ```
 
-  ![image-20240121162056318](README.assets/image-20240121162056318.png)
+![image](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/7ccf2f25-2433-415e-9a61-707ab9311ebb)
 
   - Load  my customized Kernel from *tftp* Server to Vexpress RAM.
 
