@@ -28,15 +28,23 @@ A user application (Process) requests from Linux Kernel to access hardware resou
 
 ![](README.assets/ArticleImage-12104-2.webp)
 
+
+
+
+
 ## 2. System Calls 
 
 The system call is a method for the user applications to interact with Kernel. A system call is initiated by the program executing a specific instruction, which triggers a switch to [kernel ](https://www.geeksforgeeks.org/kernel-in-operating-system/)mode (software interrupt is generated), allowing the program to request a service from the Kernel. The Kernel then  handles the request, performs the necessary operations, and returns the  result back to the program.
 
 ![](README.assets/userspace-kernelspace.png)
 
+
+
 ### 2.1. System call workflow 
 
 ![](README.assets/SystemCalls.drawio.svg)
+
+
 
 ### 2.2. Examples of System Calls
 
@@ -47,6 +55,8 @@ The system call is a method for the user applications to interact with Kernel. A
 | **Device Management** | ReadConsole() - WriteConsole()          | Read() - Write()                    |
 
 For more details about System Call read those articles : [SystemCalls](https://www.geeksforgeeks.org/introduction-of-system-call/) , [LibCalls Vs SysCalls](https://www.geeksforgeeks.org/difference-between-system-call-and-library-call/) , [LinuxSysCalls](https://www.geeksforgeeks.org/linux-system-call-in-detail/)
+
+
 
 
 
@@ -299,6 +309,8 @@ sudo apt-get install libmpc-dev
 
 
 
+
+
 ### 3.3. Linux Kernel Modules
 
 Kernel modules are pieces of code that can be statically compiled with the kernel OR dynamically loaded into or unloaded from the Linux kernel at runtime. They extend the functionality of the kernel by adding support for new hardware, file  systems at running kernel without rebooting the system.
@@ -345,9 +357,13 @@ make -j4 ARCH=arm CROSS_COMPILE=arm-cortex_a8-linux-gnueabihf- INSTALL_MOD_PATH=
 
 
 
+
+
 ## 4. Boot the Kernel from TFTP server
 
 In my case I use Qemu emulator and Vexpress Arm based as a target board. After compile the Kernel files we want 2 important files (`zImage `  which is our kernel image) and (`.dtb file `  has the hardware Info ).
+
+
 
 #### 4.1.  Vexpress board (target) over Qemu Emulator
 
@@ -463,6 +479,8 @@ sudo qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel u-boot -sd sd.img
 
     ![image-20240121164133560](README.assets/image-20240121164133560.png)
 
+
+
 #### 4.3. Boot The zImage (my Kernel Image) and Vexpress DTB file
 
 The `bootz` command in U-Boot is used to boot a Linux kernel  image along with its device tree blob (DTB) on an embedded board. 
@@ -491,6 +509,8 @@ bootz $Zimag_RAM_Add - $dtb_hardware_Add
 **We Will Solve this Panic Next Session, The Task DONE HERE :)** 
 
 To Be Cont'd . . . . . . . . . . . . . . . . . . . . . . . 
+
+
 
 
 
