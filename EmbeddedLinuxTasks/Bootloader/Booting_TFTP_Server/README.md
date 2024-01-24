@@ -424,7 +424,7 @@ fatload mmc 0:1 0x60000000 Zimage
    In my case 
 
   ```
-  tftp 0x6000000 Zimage
+  tftp 0x60000000 Zimage
   ```
 
   ![zimg](README.assets/zimg.jpg)
