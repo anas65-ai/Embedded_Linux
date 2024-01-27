@@ -271,7 +271,14 @@ sudo mkfs.ext4 -L rootfs ${DISK}p2
 
 ![Screenshot from 2024-01-08 23-13-26](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/06c70d06-d901-40c3-9c20-5c9397c7ee64)
 
-
+- Mount The Virtual SD Card
+  ```
+cd ~
+mkdir boot 
+mkdir rootfs
+$ sudo mount ${DISK}p1 ~/boot
+$ sudo mount ${DISK}p2 ~/rootfs
+```
 Congratulations ! , We created a Virtual SD card has two partitions first, boot partition and second rootfs partition. 
 
 
