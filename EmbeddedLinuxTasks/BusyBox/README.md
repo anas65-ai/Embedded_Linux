@@ -55,7 +55,7 @@ Instead of Compiling all Commands and binaries source files manually, **BusyBox*
 
 the Linux file system is a hierarchical structure that organizes and  manages files and directories on a Linux-based operating system. It  defines how files are named, stored, and retrieved from storage devices. The file system is integral to various operations, such as opening,  copying, editing, and deleting files, as well as accessing data over the Internet. It provides a unified and organized approach to managing data and resources on the system. For more info read those articles [FileSystem](https://www.freecodecamp.org/news/file-systems-architecture-explained/) , [LinuxFS](https://www.baeldung.com/linux/rootfs).
 
-![](Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/1704678306145.gif)
+![](README.assets/1704678306145.gif)
 
 #### 2.2.2. Root File System (rootfs)
 
@@ -100,9 +100,9 @@ The root file system in Linux serves as the top-level directory  hierarchy and i
   git clone https://github.com/mirror/busybox.git
   ```
 
-  ![Screenshot_from_2024-01-26_18-43-57](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-26_18-43-57.png)
+  ![Screenshot_from_2024-01-26_18-43-57](README.assets/Screenshot_from_2024-01-26_18-43-57.png)
 
-![](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/commands.drawio.svg)
+![](README.assets/commands.drawio.svg)
 
 - **Configure your Cross-Compiler and the Target Architecture**
 
@@ -117,13 +117,13 @@ The root file system in Linux serves as the top-level directory  hierarchy and i
   export CROSS_COMPILE=~/x-tools/arm-cortexa9_neon-linux-musleabihf/bin/arm-cortexa9_neon-linux-musleabihf-
   ```
 
-  ![Screenshot_from_2024-01-27_06-56-10](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-27_06-56-10.png)
+  ![Screenshot_from_2024-01-27_06-56-10](README.assets/Screenshot_from_2024-01-27_06-56-10.png)
 
   ### 2.3.1. BusyBox Configurations (Build Statically) 
 
   - This is the MenuConfig Control Keys
 
-    ![Screenshot_from_2024-01-27_06-36-52](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-27_06-36-52.png)
+    ![Screenshot_from_2024-01-27_06-36-52](README.assets/Screenshot_from_2024-01-27_06-36-52.png)
 
   I Will Configure busybox to be static build from menuconfig as follow :
 
@@ -131,17 +131,17 @@ The root file system in Linux serves as the top-level directory  hierarchy and i
   make menuconfig
   ```
 
-  ![Screenshot_from_2024-01-27_06-28-39](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-27_06-28-39.png)
+  ![Screenshot_from_2024-01-27_06-28-39](README.assets/Screenshot_from_2024-01-27_06-28-39.png)
 
 - [x] **Select The Linking Type in the build process (Static)**
 
   - Select Settings and then go to *Build option*  and select **build static library**
 
-  ![](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/commands.drawio(2).svg)
+  ![](README.assets/commands.drawio(2).svg)
 
 Then Save and exit 
 
-![image-20240128203351245](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240128203351245.png)
+![image-20240128203351245](README.assets/image-20240128203351245.png)
 
 - Build the commands source files
 
@@ -149,9 +149,9 @@ Then Save and exit
 make
 ```
 
-![Screenshot_from_2024-01-28_20-34-54](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-28_20-34-54.png)
+![Screenshot_from_2024-01-28_20-34-54](README.assets/Screenshot_from_2024-01-28_20-34-54.png)
 
-![Screenshot_from_2024-01-28_20-35-27](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-28_20-35-27.png)
+![Screenshot_from_2024-01-28_20-35-27](README.assets/Screenshot_from_2024-01-28_20-35-27.png)
 
 > There is **warning will appear (Ignore it)** `warning: ignoring return value` 
 >
@@ -159,7 +159,7 @@ make
 
 At the end of building process the following logs will appear :
 
-![Screenshot_from_2024-01-28_20-37-44](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-28_20-37-44.png)
+![Screenshot_from_2024-01-28_20-37-44](README.assets/Screenshot_from_2024-01-28_20-37-44.png)
 
 >1. **`LINK busybox_unstripped`**:
 >
@@ -201,7 +201,7 @@ At the end of building process the following logs will appear :
 
 - Let's Check BusyBox is compiled Statically or NOT
 
-  ![image-20240130001624582](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240130001624582.png)
+  ![image-20240130001624582](README.assets/image-20240130001624582.png)
   
 - Generate the Binaries of the **rootfs** 
 
@@ -211,15 +211,15 @@ At the end of building process the following logs will appear :
 
   >This command will create folder its name **"_install"**  contains the binaries of target root file system
 
-![Screenshot_from_2024-01-28_20-51-11](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-28_20-51-11.png)
+![Screenshot_from_2024-01-28_20-51-11](README.assets/Screenshot_from_2024-01-28_20-51-11.png)
 
-![Screenshot_from_2024-01-28_20-51-54](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-28_20-51-54.png)
+![Screenshot_from_2024-01-28_20-51-54](README.assets/Screenshot_from_2024-01-28_20-51-54.png)
 
 The above message remember you to change the owner of the binary files to be owned by **root** , because you compiled those files in your host machine and now the owner of files is host user (***anas***) , when you copy those files to your target machine (vexpress or BeagleBone...) , there is permission denied error will occur because the target machine user hasn't the permission to execute  `anas` files or write permission if you want to edit the configuration in your target board.
 
-![Screenshot_from_2024-01-27_07-19-44](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-27_07-19-44.png) 
+![Screenshot_from_2024-01-27_07-19-44](README.assets/Screenshot_from_2024-01-27_07-19-44.png) 
 
-![Screenshot_from_2024-01-27_07-19-56](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-27_07-19-56.png)
+![Screenshot_from_2024-01-27_07-19-56](README.assets/Screenshot_from_2024-01-27_07-19-56.png)
 
 - Let's check who is the files owner 
 
@@ -227,7 +227,7 @@ The above message remember you to change the owner of the binary files to be own
   ls -l _install/
   ```
 
-  ![Screenshot_from_2024-01-28_21-05-07](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-28_21-05-07.png)
+  ![Screenshot_from_2024-01-28_21-05-07](README.assets/Screenshot_from_2024-01-28_21-05-07.png)
 
 The files owner is Host user (`anas`), it should be `root`  So, we will Solve this point later. 
 
@@ -265,17 +265,17 @@ mkdir rootfs_Static
   >
   >
 
-![Screenshot_from_2024-01-29_01-50-10](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-29_01-50-10.png)
+![Screenshot_from_2024-01-29_01-50-10](README.assets/Screenshot_from_2024-01-29_01-50-10.png)
 
-![Screenshot_from_2024-01-29_01-50-21](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-29_01-50-21.png)
+![Screenshot_from_2024-01-29_01-50-21](README.assets/Screenshot_from_2024-01-29_01-50-21.png)
 
-![image-20240129015736887](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129015736887.png)
+![image-20240129015736887](README.assets/image-20240129015736887.png)
 
 - Copy the Dynamic Kernel modules from the last task ([Here](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Kernel#331-compile-dynamic-kernel-modules)) to `rootfs_Static` .
 
   >Note:  **Static** in `rootfs_Static` refer to Compiling the BusyBox (Command source files) Statically. It does not any relation with **Dynamic** in `dynamic kernel module` . 
 
-  ![image-20240129020451216](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129020451216.png)
+  ![image-20240129020451216](README.assets/image-20240129020451216.png)
 
   ```bash
   cp -rp ~/rootfs/* ~/rootfs_Static
@@ -298,7 +298,7 @@ mkdir rootfs_Static
   mkdir boot dev etc home mnt proc root srv sys
   ```
 
-  ![image-20240129022226430](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129022226430.png)
+  ![image-20240129022226430](README.assets/image-20240129022226430.png)
 
   - Create a startup script called `rcS`  in `etc/init.d/` to do initialization tasks when booting the kernel
 
@@ -307,7 +307,7 @@ mkdir rootfs_Static
     touch etc/init.d/rcS
     ```
 
-      ![image-20240129024734032](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129024734032.png)
+      ![image-20240129024734032](README.assets/image-20240129024734032.png)
 
     - Open `rcS` file and write the following commands then **change its permission to make it executable** :
 
@@ -366,9 +366,9 @@ mkdir rootfs_Static
 
     In my case :
 
-    ![image-20240129033139570](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129033139570.png)
+    ![image-20240129033139570](README.assets/image-20240129033139570.png)
 
-    ​		![image-20240129035731473](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129035731473.png)
+    ​		![image-20240129035731473](README.assets/image-20240129035731473.png)
 
   - Change the Script permission to make it executable
 
@@ -376,7 +376,7 @@ mkdir rootfs_Static
     chmod +x etc/init.d/rcS
     ```
 
-    ![image-20240129035848254](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129035848254.png)
+    ![image-20240129035848254](README.assets/image-20240129035848254.png)
 
 - Create a Configuration file called `inittab` in `/etc` directory 
 
@@ -392,9 +392,9 @@ mkdir rootfs_Static
 >
 >**Any directory starts with `/` refer to your Linux Root file system**
 >
->![image-20240129033910173](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129033910173.png)
+>![image-20240129033910173](README.assets/image-20240129033910173.png)
 
-![image-20240129034022106](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129034022106.png)
+![image-20240129034022106](README.assets/image-20240129034022106.png)
 
 - Open the file and write the follow lines on it: 
 
@@ -424,7 +424,7 @@ mkdir rootfs_Static
 vim etc/inittab
 ```
 
-![image-20240129035348783](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129035348783.png)
+![image-20240129035348783](README.assets/image-20240129035348783.png)
 
 
 
@@ -434,7 +434,7 @@ vim etc/inittab
   ls -lh ~/rootfs_Static
   ```
 
-  ![image-20240129041440623](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129041440623.png)
+  ![image-20240129041440623](README.assets/image-20240129041440623.png)
 
 This Files owner should be `Root` to enable the Embedded Linux board to write /execute the commands.
 
@@ -464,9 +464,9 @@ Go to SD image location and run the follow commands :
 sudo losetup -f --show --partscan sd.img
 ```
 
-![Untitled Diagram.drawio(2)](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Untitled Diagram.drawio(2).svg)
+![Untitled Diagram.drawio(2)](README.assets/Untitled Diagram.drawio(2).svg)
 
-![](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Untitled Diagram.drawio(4).svg)
+![](README.assets/Untitled Diagram.drawio(4).svg)
 
 
 
@@ -480,7 +480,7 @@ we want to mount the *ext4* (rootfs) partition of virtual SD card to our local f
 sudo mkdir /media/anas
 ```
 
-![image-20240129045341903](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129045341903.png)
+![image-20240129045341903](README.assets/image-20240129045341903.png)
 
 - Mount the Partition2 of SD card
 
@@ -495,11 +495,11 @@ sudo mount -o rw /dev/loop18p2 /media/anas/rootfs
 >
 >So, Mount the filesystem from the specified block device as read-write on the specified directory. After this command, you should be able to read/write with the contents of the filesystem under `/media/anas/rootfs`.
 
-![](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Untitled Diagram.drawio(5).svg)
+![](README.assets/Untitled Diagram.drawio(5).svg)
 
 - **Copy the Contents of `~/rootfs_Static` to `/media/anas/rootfs`**  
 
-  ![](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Untitled Diagram.drawio(6).svg)
+  ![](README.assets/Untitled Diagram.drawio(6).svg)
 
 - In case of Empty SD card you can use `cp` command But, if the SD card Not empty us `rsync` command.
 
@@ -517,7 +517,7 @@ cp -rp ~/rootfs_Static/* /media/anas/rootfs
 >
 >Putting it all together, the command is copying all the contents (recursively and preserving attributes) from the `~/rootfs_Static` directory to the `/media/anas/rootfs` directory. 
 
-![image-20240129051826945](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129051826945.png)
+![image-20240129051826945](README.assets/image-20240129051826945.png)
 
 
 
@@ -525,7 +525,7 @@ cp -rp ~/rootfs_Static/* /media/anas/rootfs
 
   - I created a directory called `boot` under `/media/anas` 
 
-    ![image-20240129053216803](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129053216803.png)
+    ![image-20240129053216803](README.assets/image-20240129053216803.png)
 
   - Let's mount the `boot` partition (p1) of SD card 
 
@@ -541,7 +541,7 @@ cp -rp ~/rootfs_Static/* /media/anas/rootfs
   >sudo fsck /dev/loop<device number><partition number>
   >```
   >
-  >![Screenshot from 2024-01-29 05-47-22](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot from 2024-01-29 05-47-22.png)
+  >![Screenshot from 2024-01-29 05-47-22](README.assets/Screenshot from 2024-01-29 05-47-22.png)
 
   
 
@@ -557,7 +557,7 @@ cp -rp ~/rootfs_Static/* /media/anas/rootfs
     sudo cp  ~/linux/arch/arm/boot/zImage /media/anas/boot/
     ```
 
-    ![](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Untitled Diagram.drawio(8).svg)
+    ![](README.assets/Untitled Diagram.drawio(8).svg)
 
   - **Copy Vexpress DTB file to `boot` partition in SD card**
 
@@ -571,7 +571,7 @@ cp -rp ~/rootfs_Static/* /media/anas/rootfs
     sudo cp ~/linux/arch/arm/boot/dts/arm/*-ca9.dtb /media/anas/boot
     ```
 
-    ![image-20240129060611695](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129060611695.png)
+    ![image-20240129060611695](README.assets/image-20240129060611695.png)
 
 
 
@@ -591,7 +591,7 @@ In my case
 qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel u-boot -sd sd.img
 ```
 
-![image-20240129061546678](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129061546678.png)
+![image-20240129061546678](README.assets/image-20240129061546678.png)
 
 ### 4.2. Set U-boot Environment variables 
 
@@ -615,7 +615,7 @@ setenv bootargs 'console=ttyAMA0 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait
 >  - **`rootwait`:** Causes the kernel to wait for the root device to become available before proceeding with the boot process.
 >  - **`init=/sbin/init`:** Specifies the path to the init process, which is the first process started by the Linux kernel.
 
-![image-20240129062513602](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129062513602.png)
+![image-20240129062513602](README.assets/image-20240129062513602.png)
 
 - Run this command to know Vexpress RAM addresses 
 
@@ -623,7 +623,7 @@ setenv bootargs 'console=ttyAMA0 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait
   bd
   ```
 
-  ![image-20240129062914469](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129062914469.png)
+  ![image-20240129062914469](README.assets/image-20240129062914469.png)
 
 - I created variables to save the addresses of zImage and DTB file in the Vexpress RAM
 
@@ -635,7 +635,7 @@ setenv bootargs 'console=ttyAMA0 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait
   setenv dtb_hardware_Add 0x65000000
   ```
 
-  ![image-20240129063007575](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129063007575.png)
+  ![image-20240129063007575](README.assets/image-20240129063007575.png)
 
 ### 4.3. Boot the zImage and DTB file from SD card
 
@@ -645,7 +645,7 @@ setenv bootargs 'console=ttyAMA0 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait
   fatload mmc 0:1 $Zimag_RAM_Add zImage
   ```
 
-  ![image-20240129063428179](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129063428179.png)
+  ![image-20240129063428179](README.assets/image-20240129063428179.png)
 
   - Let's Check The Ram Content in `Zimag_RAM_Add` 
 
@@ -653,7 +653,7 @@ setenv bootargs 'console=ttyAMA0 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait
     md $Zimag_RAM_Add
     ```
 
-    ![image-20240129063454193](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129063454193.png)
+    ![image-20240129063454193](README.assets/image-20240129063454193.png)
 
 - Load Vexpress DTB file from SD card (fat partition) to Target (Vexpress) RAM
 
@@ -661,7 +661,7 @@ setenv bootargs 'console=ttyAMA0 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait
   fatload mmc 0:1 $dtb_hardware_Add vexpress-v2p-ca9.dtb
   ```
 
-  ![image-20240129063607932](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129063607932.png)
+  ![image-20240129063607932](README.assets/image-20240129063607932.png)
 
   - Let's Check The Ram Content in `dtb_hardware_Add` 
 
@@ -669,7 +669,7 @@ setenv bootargs 'console=ttyAMA0 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait
     md $dtb_hardware_Add
     ```
 
-    ![image-20240129063722071](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129063722071.png)
+    ![image-20240129063722071](README.assets/image-20240129063722071.png)
 
 - Booting the Kernel and DTB file 
 
@@ -679,11 +679,11 @@ setenv bootargs 'console=ttyAMA0 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait
 
   >Note That : **PANIC** Not appear and It is Booting Successfully. 
 
-![Screenshot_from_2024-01-29_13-55-34](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-29_13-55-34.png)
+![Screenshot_from_2024-01-29_13-55-34](README.assets/Screenshot_from_2024-01-29_13-55-34.png)
 
-![Screenshot_from_2024-01-29_13-56-05](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-29_13-56-05.png)
+![Screenshot_from_2024-01-29_13-56-05](README.assets/Screenshot_from_2024-01-29_13-56-05.png)
 
-![Screenshot_from_2024-01-29_13-56-18](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-29_13-56-18.png)
+![Screenshot_from_2024-01-29_13-56-18](README.assets/Screenshot_from_2024-01-29_13-56-18.png)
 
 - The Kernel Will Ask You Which Shell (Terminal) you will use (because we configure it in **inittab**)
 
@@ -693,7 +693,7 @@ setenv bootargs 'console=ttyAMA0 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait
 
 - Press **ENTER**  To continue 
 
-![image-20240129140819473](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129140819473.png)
+![image-20240129140819473](README.assets/image-20240129140819473.png)
 
 - To see my Kernel Local Version run this command
 
@@ -701,13 +701,13 @@ setenv bootargs 'console=ttyAMA0 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait
   uname -r
   ```
 
-  ![image-20240129141220328](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129141220328.png)
+  ![image-20240129141220328](README.assets/image-20240129141220328.png)
 
 **Congratulations You are run your own kernel Successfully**.
 
 - Let's Navigate our system (for example let's see the `/dev` directory)
 
-  ![Screenshot_from_2024-01-30_00-19-44](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-30_00-19-44.png)
+  ![Screenshot_from_2024-01-30_00-19-44](README.assets/Screenshot_from_2024-01-30_00-19-44.png)
 
 >When the kernel boots, it initializes various device drivers and creates corresponding device files in the `/dev` directory to allow user-space applications to communicate with those  devices. These devices can include physical hardware devices (like  disks, terminals, etc.) 
 >
@@ -731,13 +731,13 @@ By default Busybox compiled dynamically in case of **disable the "Build BusyBox 
 make menuconfig
 ```
 
-![Screenshot_from_2024-01-30_00-40-59](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-30_00-40-59.png) 
+![Screenshot_from_2024-01-30_00-40-59](README.assets/Screenshot_from_2024-01-30_00-40-59.png) 
 
 - Go to build option and Disable those options by Press **SPACE** , Then Save and exit.
 
 ![](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Untitled Diagram.drawio(11).svg)
 
-![image-20240130005045137](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240130005045137.png)
+![image-20240130005045137](README.assets/image-20240130005045137.png)
 
 
 
@@ -747,11 +747,11 @@ make menuconfig
 make
 ```
 
-![image-20240130005348784](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240130005348784.png)
+![image-20240130005348784](README.assets/image-20240130005348784.png)
 
 - Ensure that The building is Done Dynamically 
 
-![image-20240130005656098](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240130005656098.png)
+![image-20240130005656098](README.assets/image-20240130005656098.png)
 
 **Building Dynamic BusyBox:** When you build BusyBox with dynamic linking, the resulting BusyBox executable will have depend on certain shared libraries. When you execute a command with BusyBox, the system loader dynamically links the BusyBox executable with the required shared libraries. This happens at runtime. The system loader (`ld.so` ) is responsible for locating and loading the necessary shared libraries. It resolves symbols and sets up the runtime environment for the executables (commands, Binaries).
 
@@ -759,7 +759,7 @@ make
 
 The Shared objects(`.so`) which the BusyBox depends on is located under `sysroot` directory in `x-tools` cross compiler directory.
 
-![Screenshot_from_2024-01-30_01-12-57](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-30_01-12-57.png)
+![Screenshot_from_2024-01-30_01-12-57](README.assets/Screenshot_from_2024-01-30_01-12-57.png)
 
 ### 5.4. Create Root File System (rootfs) for Embedded Linux Target
 
@@ -776,7 +776,7 @@ mkdir rootfs_Dynamic
   cp -rp ~/rootfs_Static/* ~/rootfs_Dynamic
   ```
 
-  ![image-20240130014527819](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240130014527819.png)
+  ![image-20240130014527819](README.assets/image-20240130014527819.png)
 
 - Copy  `sysroot` directory to `rootfs_Dynamic` directory
 
@@ -790,7 +790,7 @@ mkdir rootfs_Dynamic
   cp -rp ~/x-tools/arm-cortexa9_neon-linux-musleabihf/arm-cortexa9_neon-linux-musleabihf/sysroot ~/rootfs_Dynamic
   ```
 
-  ![image-20240130015113382](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240130015113382.png)
+  ![image-20240130015113382](README.assets/image-20240130015113382.png)
 
 - change the files owner to `root`
 
@@ -798,7 +798,7 @@ mkdir rootfs_Dynamic
   sudo chown -R root:root ~/rootfs_Dynamic
   ```
 
-  ![image-20240130015355958](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240130015355958.png)
+  ![image-20240130015355958](README.assets/image-20240130015355958.png)
 
 - Copy the `rootfs_Dynamic` contents to SD card (ext4 partition)
 
@@ -820,7 +820,7 @@ mkdir rootfs_Dynamic
     sudo cp -rp ~/rootfs_Dynamic/* /media/anas/rootfs
     ```
 
-    ![image-20240130020957418](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240130020957418.png) 
+    ![image-20240130020957418](README.assets/image-20240130020957418.png) 
 
 ### 5.5.  Boot the Kernel 
 
@@ -832,7 +832,7 @@ Go to U-boot directory and run this command
 qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel /u-boot -sd /sd.img
 ```
 
-![image-20240130021353704](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240130021353704.png)
+![image-20240130021353704](README.assets/image-20240130021353704.png)
 
 - The Environment Variables should be saved from above steps(Static busybox) , but make sure 
 
@@ -840,7 +840,7 @@ qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel /u-boot -sd /sd.img
   echo ${bootargs}
   ```
 
-  ![image-20240130021633428](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240130021633428.png)
+  ![image-20240130021633428](README.assets/image-20240130021633428.png)
 
 #### 5.5.2.  Boot the zImage and DTB file from SD card
 
@@ -850,7 +850,7 @@ qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel /u-boot -sd /sd.img
   fatload mmc 0:1 $Zimag_RAM_Add zImage
   ```
 
-  ![image-20240129063428179](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129063428179.png)
+  ![image-20240129063428179](README.assets/image-20240129063428179.png)
 
 - Load Vexpress DTB file from SD card (fat partition) to Target (Vexpress) RAM
 
@@ -858,7 +858,7 @@ qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel /u-boot -sd /sd.img
   fatload mmc 0:1 $dtb_hardware_Add vexpress-v2p-ca9.dtb
   ```
 
-  ![image-20240129063607932](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/image-20240129063607932.png)
+  ![image-20240129063607932](README.assets/image-20240129063607932.png)
 
 - Booting the Kernel and DTB file 
 
@@ -868,11 +868,11 @@ qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel /u-boot -sd /sd.img
 
   >Note That : **PANIC** Not appear and It is Booting Successfully. 
 
-![Screenshot_from_2024-01-30_03-20-23](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-30_03-20-23.png)
+![Screenshot_from_2024-01-30_03-20-23](README.assets/Screenshot_from_2024-01-30_03-20-23.png)
 
 - Navigate in Our Operating system 
 
-  ![Screenshot_from_2024-01-30_03-20-50](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-30_03-20-50.png)
+  ![Screenshot_from_2024-01-30_03-20-50](README.assets/Screenshot_from_2024-01-30_03-20-50.png)
 
 
 
