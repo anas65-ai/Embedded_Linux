@@ -448,7 +448,7 @@ chown -R root:root /path/to/directory
 sudo chown -R root:root ~/rootfs_Static
 ```
 
-![](README.assets/Untitled Diagram.drawio(3).svg)
+![](README.assets/Untitled_Diagram.drawio(3).svg)
 
 
 
@@ -495,11 +495,11 @@ sudo mount -o rw /dev/loop18p2 /media/anas/rootfs
 >
 >So, Mount the filesystem from the specified block device as read-write on the specified directory. After this command, you should be able to read/write with the contents of the filesystem under `/media/anas/rootfs`.
 
-![](README.assets/Untitled Diagram.drawio(5).svg)
+![](README.assets/Untitled_Diagram.drawio(5).svg)
 
 - **Copy the Contents of `~/rootfs_Static` to `/media/anas/rootfs`**  
 
-  ![](README.assets/Untitled Diagram.drawio(6).svg)
+  ![](README.assets/Untitled_Diagram.drawio(6).svg)
 
 - In case of Empty SD card you can use `cp` command But, if the SD card Not empty us `rsync` command.
 
@@ -533,7 +533,7 @@ cp -rp ~/rootfs_Static/* /media/anas/rootfs
     sudo mount -o rw /dev/loop18p1 /media/anas/boot
     ```
 
-    ![](README.assets/Untitled Diagram.drawio(7).svg)
+    ![](README.assets/Untitled_Diagram.drawio(7).svg)
 
   >**Error** may be appear when you open the SD partition  **"structure needs cleaning"** [SOLVED]
   >
@@ -541,7 +541,7 @@ cp -rp ~/rootfs_Static/* /media/anas/rootfs
   >sudo fsck /dev/loop<device number><partition number>
   >```
   >
-  >![Screenshot from 2024-01-29 05-47-22](README.assets/Screenshot from 2024-01-29 05-47-22.png)
+  >![Screenshot_from_2024-01-29_05-47-22](README.assets/Screenshot_from_2024-01-29_05-47-22.png)
 
   
 
@@ -557,7 +557,7 @@ cp -rp ~/rootfs_Static/* /media/anas/rootfs
     sudo cp  ~/linux/arch/arm/boot/zImage /media/anas/boot/
     ```
 
-    ![](README.assets/Untitled Diagram.drawio(8).svg)
+    ![](README.assets/Untitled_Diagram.drawio(8).svg)
 
   - **Copy Vexpress DTB file to `boot` partition in SD card**
 
@@ -687,7 +687,7 @@ setenv bootargs 'console=ttyAMA0 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait
 
 - The Kernel Will Ask You Which Shell (Terminal) you will use (because we configure it in **inittab**)
 
-![](README.assets/Untitled Diagram.drawio(10).svg)
+![](README.assets/Untitled_Diagram.drawio(10).svg)
 
 
 
@@ -735,7 +735,7 @@ make menuconfig
 
 - Go to build option and Disable those options by Press **SPACE** , Then Save and exit.
 
-![](README.assets/Untitled Diagram.drawio(11).svg)
+![](README.assets/Untitled_Diagram.drawio(11).svg)
 
 ![image-20240130005045137](README.assets/image-20240130005045137.png)
 
@@ -768,7 +768,7 @@ cd ~
 mkdir rootfs_Dynamic
 ```
 
-![](README.assets/Untitled Diagram.drawio(12).svg)
+![](README.assets/Untitled_Diagram.drawio(12).svg)
 
 - Copy All the Contents of `rootfs_Static` which we created it before **BUT TAKE WE WILL MODIFY !!**
 
@@ -792,7 +792,7 @@ mkdir rootfs_Dynamic
   file ~/rootfs_Dynamic/bin/busybox
   ```
 
-  ![](README.assets/Untitled Diagram.drawio(13).svg)
+  ![](README.assets/Untitled_Diagram.drawio(13).svg)
 
 - Copy the contents of  `sysroot` under `x-tools` directory to `rootfs_Dynamic` directory
 
@@ -806,12 +806,12 @@ mkdir rootfs_Dynamic
   sudo cp -rp ~/x-tools/arm-cortexa9_neon-linux-musleabihf/arm-cortexa9_neon-linux-musleabihf/sysroot/* ~/rootfs_Dynamic
   ```
 
-<<<<<<< HEAD
-  ![image-20240130154941965](README.assets/image-20240130154941965.png)
-=======
-  ![image-20240130015113382](README.assets/image-20240130015113382.png)
->>>>>>> origin/main
 
+
+![image-20240130154941965](README.assets/image-20240130154941965.png)
+=======
+
+  ![image-20240130015113382](README.assets/image-20240130015113382.png)
 - change the files owner to `root`
 
   ```bash
@@ -845,12 +845,10 @@ mkdir rootfs_Dynamic
     ```bash
     sudo cp -rp ~/rootfs_Dynamic/* /media/anas/rootfs
     ```
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> origin/main
-    ![image-20240130020957418](README.assets/image-20240130020957418.png) 
+
+
+![image-20240130020957418](README.assets/image-20240130020957418.png) 
 
 ### 5.5.  Boot the Kernel 
 
@@ -903,10 +901,8 @@ qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel /u-boot -sd /sd.img
 - Navigate in Our Operating system 
 
   ![Screenshot_from_2024-01-30_03-20-50](README.assets/Screenshot_from_2024-01-30_03-20-50.png)
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
+
 
 ![image-20240130161925361](README.assets/image-20240130161925361.png)
 
@@ -920,7 +916,7 @@ There are common errors may appear such as :
 
 #### 6.1. Kernel PANIC [SOLVED]
 
-![](README.assets/Untitled Diagram.drawio(14).svg)
+![](README.assets/Untitled_Diagram.drawio(14).svg)
 
 - Let's Check the Executables ARM Architecture Based or NOT 
 
@@ -944,7 +940,7 @@ There are common errors may appear such as :
     sudo mount -o rw /dev/loop18p2 /media/anas/rootfs
     ```
 
-    ![](README.assets/Untitled Diagram.drawio(15).svg)
+    ![](README.assets/Untitled_Diagram.drawio(15).svg)
 
 - Go to `/media/anas/rootfs`  and Check the BusyBox Executable 
 
@@ -960,7 +956,7 @@ There are common errors may appear such as :
 
 **IF The output is x86 Architecture like that :**
 
-![](README.assets/Untitled Diagram.drawio(16).svg)
+![](README.assets/Untitled_Diagram.drawio(16).svg)
 
 You should Identify the Arm Architecture again 
 
@@ -990,6 +986,10 @@ In General We Work with Emulator (Virtual machine ), So you may face un-logic Is
 - Delete the SD Card (Parition 2) contents 
 
 - Copy the `rootfs_Statically` or `rootfs_Dynamic` again to SD card.
+
+
+
+
 
 ## 7. References
 
