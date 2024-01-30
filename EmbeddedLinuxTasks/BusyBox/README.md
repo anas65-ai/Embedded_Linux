@@ -786,6 +786,19 @@ make
 
 ![image-20240130005656098](README.assets/image-20240130005656098.png)
 
+ 
+- Generate the Binaries of the **rootfs** (dynamically Based) 
+
+  ```bash
+  make install
+  ```
+
+  >This command will create folder its name **"_install"**  contains the binaries of target root file system
+
+![Screenshot_from_2024-01-28_20-51-11](README.assets/Screenshot_from_2024-01-28_20-51-11.png)
+
+![Screenshot_from_2024-01-28_20-51-54](README.assets/Screenshot_from_2024-01-28_20-51-54.png)
+
 **Building Dynamic BusyBox:** When you build BusyBox with dynamic linking, the resulting BusyBox executable will have depend on certain shared libraries. When you execute a command with BusyBox, the system loader dynamically links the BusyBox executable with the required shared libraries. This happens at runtime. The system loader (`ld.so` ) is responsible for locating and loading the necessary shared libraries. It resolves symbols and sets up the runtime environment for the executables (commands, Binaries).
 
 ### 5.3. SYSROOT
