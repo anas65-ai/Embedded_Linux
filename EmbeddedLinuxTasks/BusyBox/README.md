@@ -43,7 +43,7 @@ The next step is creating Root File System of target (board) and run our Operati
 
 The root file system of the target machine requires essential Linux commands and libraries to support various  applications. These commands are essentially binaries (applications) have corresponding source files. To execute these commands on the target machine (e.g., Vexpress, BeagleBone), it is  necessary to compile these source files using a Cross Compiler supports  ARM architecture. This compilation process generates the  executables of the commands, including commonly used utilities like `ls`, `touch`, `ar`, `gcc`, `rm`, `echo`, and more.
 
-![commands.drawio(1).svg](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/commands.drawio(1).svg)
+![commands.drawio(1).svg](/README.assets/commands.drawio(1).svg)
 
 Instead of Compiling all Commands and binaries source files manually, **BusyBox** is here to do that automatically. It creates Root file system commands and binaries (such as "init") for Embedded Linux Boards. We can select the needed rootfs commands and the type of linking **Statically** (Merged with Kernel) and **Dynamically** (loaded after Kernel run) . More Details [HERE](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Static_Dynamic_Lib/README.md#3-the-difference-between-dynamic-and-static-linking) about Static and Dynamic Linking.
 
