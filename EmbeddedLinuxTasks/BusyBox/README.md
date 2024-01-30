@@ -55,7 +55,7 @@ Instead of Compiling all Commands and binaries source files manually, **BusyBox*
 
 the Linux file system is a hierarchical structure that organizes and  manages files and directories on a Linux-based operating system. It  defines how files are named, stored, and retrieved from storage devices. The file system is integral to various operations, such as opening,  copying, editing, and deleting files, as well as accessing data over the Internet. It provides a unified and organized approach to managing data and resources on the system. For more info read those articles [FileSystem](https://www.freecodecamp.org/news/file-systems-architecture-explained/) , [LinuxFS](https://www.baeldung.com/linux/rootfs).
 
-![](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/1704678306145.gif)
+![](Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/1704678306145.gif)
 
 #### 2.2.2. Root File System (rootfs)
 
