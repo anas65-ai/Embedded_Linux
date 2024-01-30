@@ -1,5 +1,29 @@
 ## Table of Contents 
-
+- [**1. Recap : What is DONE till-now ?**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#1-recap--what-is-done-till-now-)
+- [**2. Busy Box**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#2-busy-box)
+  - [2.1. Why We Use BusyBox in Embedded Linux](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#21-why-we-use-busybox-in-embedded-linux)
+  - [2.2. Root File System (rootfs)](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#22-root-file-system-rootfs)
+       - [2.2.1. Linux File system](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#221-linux-file-system)
+       - [2.2.2. Root File System (rootfs)](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#222-root-file-system-rootfs)
+  - [2.3. Install BusyBox](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#23-install-busybox)
+       - [2.3.1. BusyBox Configurations (Build Statically)](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#231-busybox-configurations-build-statically)
+       - [2.3.2. Create Root File System (rootfs) for Embedded Linux Target](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#232--create-root-file-system-rootfs-for-embedded-linux-target)
+       - [2.3.3. Attach SD Image to Loop device](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#233-attach-sd-image-to-loop-device)
+- [**3. Mount rootfs of SD Card to host file system**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#3-mount-rootfs-of-sd-card-to-host-file-system)
+- [**4. Boot the Kernel**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#4-boot-the-kernel)
+     - [4.1. Run Qemu](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#41-run-qemu)
+     - [4.2. Set U-boot Environment variables](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#42-set-u-boot-environment-variables)
+     - [4.3. Boot the zImage and DTB file from SD card](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#43-boot-the-zimage-and-dtb-file-from-sd-card)
+ 
+- [**5. Build BusyBox Dynamically**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#5-build-busybox-dynamically)
+     - [5.1. BusyBox dynamic Configurations](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#51-busybox-dynamic-configurations)
+     - [5.2. Build BusyBox Dynamically](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#52-build-busybox-dynamically)
+     - [5.3. SYSROOT](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#53-sysroot)
+     - [5.4. Create Root File System (rootfs) for Embedded Linux Target](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#54-create-root-file-system-rootfs-for-embedded-linux-target)
+     - [5.5. Boot the Kernel](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#55--boot-the-kernel)
+- [**6. Common Errors**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#6-common-errors)
+- [**7. References**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#7-references)
+  
 
 
 
@@ -464,9 +488,9 @@ Go to SD image location and run the follow commands :
 sudo losetup -f --show --partscan sd.img
 ```
 
-![Untitled Diagram.drawio(2)](README.assets/Untitled Diagram.drawio(2).svg)
+![Untitled_Diagram.drawio(2)](README.assets/Untitled_Diagram.drawio(2).svg)
 
-![](README.assets/Untitled Diagram.drawio(4).svg)
+![](README.assets/Untitled_Diagram.drawio(4).svg)
 
 
 
