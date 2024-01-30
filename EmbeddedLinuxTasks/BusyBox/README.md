@@ -240,7 +240,7 @@ cd ~
 mkdir rootfs_Static
 ```
 
-![](README.assets/Untitled Diagram.drawio.svg)
+![](README.assets/UntitledDiagram.drawio.svg)
 
 - Copy the Content of `~/busybox/_install` to `rootfs_Static`  by unsing "*cp* or *rsync*"
 
@@ -290,7 +290,7 @@ mkdir rootfs_Static
   >- `~/rootfs/*`: Source directory or files to be copied.The `*` is a wildcard character that matches any file or directory in the `rootfs` directory.
   >- `~/rootfs_Static`: Destination directory where the files and directories will be copied. 
 
-  ![](README.assets/Untitled Diagram.drawio(1)-1706487567298-5.svg)
+  ![](README.assets/UntitledDiagram.drawio(1)-1706487567298-5.svg)
 
 - In `root_Static` Directory,  create the other root directories manually 
 
