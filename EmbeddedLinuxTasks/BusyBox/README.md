@@ -488,7 +488,7 @@ Go to SD image location and run the follow commands :
 sudo losetup -f --show --partscan sd.img
 ```
 
-![Untitled_Diagram.drawio(2)](README.assets/Untitled_Diagram.drawio(2).svg)
+![UntitledDiagram drawio(2)](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/f9da4a8e-048e-483e-9f87-69042640636e)
 
 ![](README.assets/Untitled_Diagram.drawio(4).svg)
 
@@ -501,7 +501,7 @@ we want to mount the *ext4* (rootfs) partition of virtual SD card to our local f
 - I created a directory under `/media/anas/` and named it "rootfs"
 
 ```bash
-sudo mkdir /media/anas
+sudo mkdir /media/anas/rootfs
 ```
 
 ![image-20240129045341903](README.assets/image-20240129045341903.png)
