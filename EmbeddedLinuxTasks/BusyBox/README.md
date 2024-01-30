@@ -225,7 +225,7 @@ At the end of building process the following logs will appear :
 
 - Let's Check BusyBox is compiled Statically or NOT
 
-  ![image-20240130001624582](README.assets/image-20240130001624582.png)
+![image](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/95830e23-188b-4343-b9f7-8e1c1bc6c6ae)
   
 - Generate the Binaries of the **rootfs** 
 
@@ -751,6 +751,13 @@ By default Busybox compiled dynamically in case of **disable the "Build BusyBox 
 
 ### 5.1. BusyBox dynamic Configurations
 
+- Set Cross Compiler and Architecture
+   ```bash
+  export CROSS_COMPILE=~/x-tools/arm-cortexa9_neon-linux-musleabihf/bin/arm-cortexa9_neon-linux-musleabihf-
+  ```
+   ```bash
+  export ARCH=arm
+   ```
 - Go to BusyBox directory and run this command then Select **Settings**
 
 ```bash
