@@ -123,7 +123,7 @@ The root file system in Linux serves as the top-level directory  hierarchy and i
 
   - This is the MenuConfig Control Keys
 
-    ![Screenshot_from_2024-01-27_06-36-52](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Screenshot_from_2024-01-27_06-36-52.png)
+    ![Screenshot_from_2024-01-27_06-36-52](README.assets/Screenshot_from_2024-01-27_06-36-52.png)
 
   I Will Configure busybox to be static build from menuconfig as follow :
 
@@ -466,7 +466,7 @@ sudo losetup -f --show --partscan sd.img
 
 ![Untitled Diagram.drawio(2)](README.assets/Untitled Diagram.drawio(2).svg)
 
-![](/home/anas/Embedded_Linux/EmbeddedLinuxTasks/BusyBox/README.assets/Untitled Diagram.drawio(4).svg)
+![](README.assets/Untitled Diagram.drawio(4).svg)
 
 
 
@@ -806,7 +806,11 @@ mkdir rootfs_Dynamic
   sudo cp -rp ~/x-tools/arm-cortexa9_neon-linux-musleabihf/arm-cortexa9_neon-linux-musleabihf/sysroot/* ~/rootfs_Dynamic
   ```
 
+<<<<<<< HEAD
   ![image-20240130154941965](README.assets/image-20240130154941965.png)
+=======
+  ![image-20240130015113382](README.assets/image-20240130015113382.png)
+>>>>>>> origin/main
 
 - change the files owner to `root`
 
@@ -841,7 +845,11 @@ mkdir rootfs_Dynamic
     ```bash
     sudo cp -rp ~/rootfs_Dynamic/* /media/anas/rootfs
     ```
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> origin/main
     ![image-20240130020957418](README.assets/image-20240130020957418.png) 
 
 ### 5.5.  Boot the Kernel 
@@ -895,6 +903,10 @@ qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel /u-boot -sd /sd.img
 - Navigate in Our Operating system 
 
   ![Screenshot_from_2024-01-30_03-20-50](README.assets/Screenshot_from_2024-01-30_03-20-50.png)
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 
 ![image-20240130161925361](README.assets/image-20240130161925361.png)
 
