@@ -903,7 +903,12 @@ mkdir rootfs_Dynamic
 Go to U-boot directory and run this command
 
 ```bash
-qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel /u-boot -sd /sd.img
+qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel path/to/u-boot -sd path/to/sd.img
+```
+In my case
+
+```bash
+qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel u-boot -sd sd.img
 ```
 
 ![image-20240130021353704](README.assets/image-20240130021353704.png)
