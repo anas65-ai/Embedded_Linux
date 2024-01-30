@@ -560,11 +560,12 @@ cp -rp ~/rootfs_Static/* /media/anas/rootfs
     ![](README.assets/Untitled_Diagram.drawio(7).svg)
 
   >**Error** may be appear when you open the SD partition  **"structure needs cleaning"** [SOLVED]
-  >
+  > ![Screenshot_from_2024-01-30_02-59-01](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/755eedd5-74f6-414b-831d-70423276ea52)
+
   >```bash
   >sudo fsck /dev/loop<device number><partition number>
   >```
-  >
+  >fsck stands for File System ChecK, and it is a command-line utility      >used to check and repair file systems on Linux operating systems. It     >is commonly used to ensure the integrity of file systems and fix any     >inconsistencies that may have occurred due to unexpected shutdowns,      >hardware failures, or other issues.
   >![Screenshot_from_2024-01-29_05-47-22](README.assets/Screenshot_from_2024-01-29_05-47-22.png)
 
   
