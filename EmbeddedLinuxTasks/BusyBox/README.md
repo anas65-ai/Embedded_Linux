@@ -565,10 +565,11 @@ cp -rp ~/rootfs_Static/* /media/anas/rootfs
   >```bash
   >sudo fsck /dev/loop<device number><partition number>
   >```
-  >fsck stands for File System ChecK, and it is a command-line utility      >used to check and repair file systems on Linux operating systems. It     >is commonly used to ensure the integrity of file systems and fix any     >inconsistencies that may have occurred due to unexpected shutdowns,      >hardware failures, or other issues.
-  >![Screenshot_from_2024-01-29_05-47-22](README.assets/Screenshot_from_2024-01-29_05-47-22.png)
-
+  >fsck stands for File System ChecK, and it is a command-line utility used to check and repair file systems on Linux operating   >systems. It is commonly used to ensure the integrity of file systems and fix any inconsistencies that may have occurred due    >to unexpected shutdowns,hardware failures, or other issues.
   
+  >![Screenshot_from_2024-01-29_05-47-22](README.assets/Screenshot_from_2024-01-29_05-47-22.png)
+  > **Ignore This part If the ERROR DOES NOT OCCURED**
+
 
   - **Copy the Kernel image (zImage)  to `boot` partition of SD card**
 
