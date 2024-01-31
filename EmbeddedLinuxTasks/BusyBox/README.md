@@ -855,10 +855,8 @@ mkdir rootfs_Dynamic
 
 
 ![image-20240130154941965](README.assets/image-20240130154941965.png)
-=======
 
-  ![image-20240130015113382](README.assets/image-20240130015113382.png)
-- change the files owner to `root`
+ - change the files owner to `root`
 
   ```bash
   sudo chown -R root:root ~/rootfs_Dynamic
