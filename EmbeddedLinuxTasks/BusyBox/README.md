@@ -402,7 +402,7 @@ mkdir rootfs_Static
 
     ![image-20240129035848254](README.assets/image-20240129035848254.png)
 
-- Create a Configuration file called `inittab` in `/etc` directory 
+- Create a Configuration file called `inittab` in `etc` directory 
 
   ```bash
   touch etc/inittab
