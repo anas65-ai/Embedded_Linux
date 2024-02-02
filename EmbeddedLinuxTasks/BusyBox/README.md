@@ -14,7 +14,7 @@
      - [4.1. Run Qemu](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#41-run-qemu)
      - [4.2. Set U-boot Environment variables](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#42-set-u-boot-environment-variables)
      - [4.3. Boot the zImage and DTB file from SD card](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#43-boot-the-zimage-and-dtb-file-from-sd-card)
- 
+
 - [**5. Build BusyBox Dynamically**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#5-build-busybox-dynamically)
      - [5.1. BusyBox dynamic Configurations](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#51-busybox-dynamic-configurations)
      - [5.2. Build BusyBox Dynamically](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#52-build-busybox-dynamically)
@@ -226,7 +226,7 @@ At the end of building process the following logs will appear :
 - Let's Check BusyBox is compiled Statically or NOT
 
 ![image](https://github.com/anaskhamees/Embedded_Linux/assets/52020047/95830e23-188b-4343-b9f7-8e1c1bc6c6ae)
-  
+
 - Generate the Binaries of the **rootfs** 
 
   ```bash
@@ -786,7 +786,7 @@ make
 
 ![image-20240130005656098](README.assets/image-20240130005656098.png)
 
- 
+
 - Generate the Binaries of the **rootfs** (dynamically Based) 
 
   ```bash
@@ -816,21 +816,22 @@ mkdir rootfs_Dynamic
 
 ![](README.assets/Untitled_Diagram.drawio(12).svg)
 
-- Copy All the Contents of `rootfs_Static` which we created it before **BUT TAKE WE WILL MODIFY !!**
+- Copy All the Contents of `busybox/_install` which is created above 
 
   ```bash
-  cp -rp ~/rootfs_Static/* ~/rootfs_Dynamic
+  cp -rp ~/busybox/_install/* ~/rootfs_Dynamic/
   ```
 
-  ![image-20240130014527819](README.assets/image-20240130014527819.png)
+  ![image-20240202010714816](README.assets/image-20240202010714816.png)
 
-- **WE SHOULD MODIFY THE `bin` ,`sbin`, `usr` Directories ,`linuxrc`   because All the binaries inside them statically compiled**
+- Create The rest of `rootfs` directories
 
   ```bash
-  sudo rsync -av ~/busybox/_install/* ~/rootfs_Dynamic
+  cd rootfs_Dynamic
+  mkdir boot dev etc home mnt proc root srv sys
   ```
 
-  ![image-20240130160425106](README.assets/image-20240130160425106.png)
+  ![image-20240202011349435](README.assets/image-20240202011349435.png)
 
 - Ensure that the BusyBox executable file linked Dynamically 
 
@@ -840,21 +841,86 @@ mkdir rootfs_Dynamic
 
   ![](README.assets/Untitled_Diagram.drawio(13).svg)
 
-- Copy the contents of  `sysroot` under `x-tools` directory to `rootfs_Dynamic` directory
+- Go to `sysroot` directory in the `x-tools` directory
 
   ```bash
-  cp -rp path/to/sysroot/* ~/rootfs_Dynamic
+  cd ~/x-tools/arm-cortexa9_neon-linux-musleabihf/arm-cortexa9_neon-linux-musleabihf/sysroot
   ```
 
-  In my case 
+  ![image-20240202011759118](README.assets/image-20240202011759118.png)
 
+  - Copy the `lib` directory to `rootfs_Dynamic`
+  
+    ```bash
+    cp -rp ./lib/ ~/rootfs_Dynamic/
+    ```
+  
+    ![image-20240202012235334](README.assets/image-20240202012235334.png)
+  
+    ![image-20240202012025966](README.assets/image-20240202012025966.png)
+  
+  - Copy the `usr/lib` and `usr/includes`
+  
   ```bash
-  sudo cp -rp ~/x-tools/arm-cortexa9_neon-linux-musleabihf/arm-cortexa9_neon-linux-musleabihf/sysroot/* ~/rootfs_Dynamic
+  cp -rp ./usr/lib/ ~/rootfs_Dynamic/usr/
+  cp -rp ./usr/include/ ~/rootfs_Dynamic/usr/
   ```
 
+![](README.assets/Dynamic.drawio.svg)
 
+![](README.assets/Dynamic.drawio(1).svg)
 
-![image-20240130154941965](README.assets/image-20240130154941965.png)
+ - Create a startup script called `rcS`  in `etc/init.d/` to do initialization tasks when booting the kernel
+
+   ```bash
+   cd ~/rootfs_Dynamic
+   mkdir etc/init.d
+   touch etc/init.d/rcS
+   ```
+
+   ```bash
+   vim etc/init.d/rcS
+   ```
+
+   ```bash
+   #!/bin/sh
+   # mount a filesystem of type `proc` to /proc
+   mount -t proc nodev /proc
+   # mount a filesystem of type `sysfs` to /sys
+   mount -t sysfs nodev /sys
+   # mount devtmpfs if you forget to configure it in Kernel menuconfig
+   #there is two options uncomment one of them  
+   #option1: mount -t devtmpfs devtempfs /dev
+   #option2: mdev -s 
+   ```
+
+   - Change the Script permission to make it executable
+
+     ```bash
+     chmod +x etc/init.d/rcS
+     ```
+
+     ![image-20240202014030831](README.assets/image-20240202014030831.png)
+
+     
+
+ - Create the `inittab` configuration file in `etc` directory .
+
+   ```bash
+   cd ~/rootfs_Dynamic/etc
+   touch inittab
+   ```
+
+   ```bash
+   # inittab file 
+   #-------------------------------------------------------
+   #When system startup,will execute "rcS" script
+   ::sysinit:/etc/init.d/rcS
+   #Start"askfirst" shell on the console (Ask the user firslty to press any key) 
+   ttyAMA0::askfirst:-/bin/sh
+   #when restarting the init process,will execute "init" 
+   ::restart:/sbin/init 
+   ```
 
  - change the files owner to `root`
 
@@ -890,9 +956,9 @@ mkdir rootfs_Dynamic
     sudo cp -rp ~/rootfs_Dynamic/* /media/anas/rootfs
     ```
 
+![image-20240202015127615](README.assets/image-20240202015127615.png)
 
 
-![image-20240130020957418](README.assets/image-20240130020957418.png) 
 
 ### 5.5.  Boot the Kernel 
 
@@ -964,6 +1030,26 @@ qemu-system-arm -M vexpress-a9 -m 128M -nographic -kernel u-boot -sd sd.img
 There are common errors may appear such as : 
 
 #### 6.1. Kernel PANIC [SOLVED]
+
+![Screenshot_from_2024-02-02_01-54-53](README.assets/Screenshot_from_2024-02-02_01-54-53.png)
+
+- This Error means that You forget to Select **Auto-mount  devtempfs** 
+
+- Add one of those commands in `rcS` script
+
+  ```bash
+  # option1: mount -t devtmpfs devtempfs /dev
+  # option2: mdev -s
+  ```
+
+#### 6.2. Kernel PANIC [SOLVED]
+
+![](README.assets/ERror.jpeg)
+
+- This Error Means that, there are an issue in  the dynamic libraries which is Kernel depends on in run time (`sysroot`) 
+- [Solution] : check this steps carefully again  [HERE](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#54-create-root-file-system-rootfs-for-embedded-linux-target)
+
+#### 6.3. Kernel PANIC [SOLVED]
 
 ![](README.assets/Untitled_Diagram.drawio(14).svg)
 
