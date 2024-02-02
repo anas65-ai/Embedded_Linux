@@ -849,6 +849,8 @@ mkdir rootfs_Dynamic
 
   ![image-20240202011759118](README.assets/image-20240202011759118.png)
 
+  ![image-20240202021549464](README.assets/image-20240202021549464.png)
+  
   - Copy the `lib` directory to `rootfs_Dynamic`
   
     ```bash
@@ -859,7 +861,7 @@ mkdir rootfs_Dynamic
   
     ![image-20240202012025966](README.assets/image-20240202012025966.png)
   
-  - Copy the `usr/lib` and `usr/includes`
+  - Copy the `sysroot/usr/lib` and `sysroot/usr/includes` to the `rootfs_Dynamic/usr`
   
   ```bash
   cp -rp ./usr/lib/ ~/rootfs_Dynamic/usr/
@@ -932,7 +934,7 @@ mkdir rootfs_Dynamic
 
 - Copy the `rootfs_Dynamic` contents to SD card (ext4 partition)
 
-  - Mount the virtual SD card (*ext4* partition)
+  - Mount the virtual SD card (*ext4* partition)     (If Not Mounted)
 
     ```bash
     sudo mount -o rw /dev/loop<device number> <partition number> /media/anas/rootfs
