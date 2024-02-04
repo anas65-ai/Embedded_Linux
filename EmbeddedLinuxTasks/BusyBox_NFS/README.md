@@ -28,7 +28,7 @@
 
 ## 1. BusyBox 
 
- As we said [Here](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#2-busy-box) , The BusyBox is one Binary (executable) contains all the commands /binaries of roots. All binaries  of rootfs is **symbolic linked** to the **busybox** executable.
+ As we said [Here](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox#2-busy-box) , The BusyBox is one Binary (executable) contains all the commands /binaries of rootfs. All binaries  of rootfs is **symbolic linked** to the **busybox** executable.
 
 ![image-20240203175902095](README.assets/image-20240203175902095.png) 
 
