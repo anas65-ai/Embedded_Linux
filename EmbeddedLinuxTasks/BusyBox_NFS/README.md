@@ -1,6 +1,22 @@
 ## Table of Contents
 
+- [**1. BusyBox**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#1-busybox)
+   - [1.1. why all binaries and executables are symbolic linked to busybox ?](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#11-why-all-binaries-and-executables-are-symbolic-linked-to-busybox-)
+   - [1.2. Embedded Linux Board RAM without BusyBox](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#12-embedded-linux-board-ram-without-busybox)
+   - [1.3. How BusyBox (Dynamically Compiled) deals with RAM](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#13-how-busybox-dynamically-compiled-deals-with-ram)
+- [**2. Network File System NFS**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#2-network-file-system-nfs)
+   - [2.1. Linux Network File System](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#21-linux-network-file-system)
+     - [2.1.1. NFS in Embedded Linux](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#211-nfs-in-embedded-linux)
+   - [2.2. Install NFS on Linux (Ubuntu)](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#22-install-nfs-on-linux-ubuntu)
+- [**3. Mount Root File System through NFS server**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#3-mount-root-file-system-through-nfs-server)
+- [**4. U-boot Configuration**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#4-u-boot-configuration)
+   - [4.1. Run Qemu](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#41-run-qemu)
+   - [4.2. Load the Kernel from TFTP server](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#42-load-the-kernel-from-tftp-server)
+   - [4.3. Boot the Kernel and mount rootfs from NFS server](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#43-boot-the-kernel-and-mount-rootfs-from-nfs-server)
+   - [4.4. Navigate your own OS](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#44-navigate-your-own-os)
 
+- [**5. References**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/BusyBox_NFS#5-references)
+  
 
 
 
