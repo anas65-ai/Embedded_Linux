@@ -11,7 +11,7 @@
 - [**3. Yocto Terminologies** ]()
 - [**4. Yocto Project Work FLow** ]()
 - [**5. Install Yocto** ]()
-- [References ]()
+- [**References **]()
 
 
 
@@ -437,13 +437,16 @@ This means that developers can use the pre-built software packages available in 
 
 ![image-20240302031227783](README.assets/image-20240302031227783.png)
 
+
+
 ## References 
 
 1.  https://epteck.com/yocto-vs-buildroot-comparison/
 2.  https://github.com/yasminehelmy2001/Embedded_Linux/tree/master/EmbeddedLinux/07.Yocto
 3.  https://subscription.packtpub.com/book/iot-and-hardware/9781785281952/1/ch01lvl1sec10/yocto-project-workflow
-4.  https://docs.yoctoproject.org/2.5/overview-manual/overview-manual.html
-5.  http://simple-is-beauty.blogspot.com/2017/10/poky-vs-yocto-vs-openembedded.html
-6.  https://www.yoctoproject.org/development/technical-overview/
-7.  https://www.windriver.com/solutions/learning/yocto
-8.  https://kickstartembedded.com/2021/12/19/yocto-part-1-a-definitive-introduction/?amp=1
+4.  https://github.com/FadyKhalil/EmbeddedLinux/blob/main/8-Yocto/README.md
+5.  https://docs.yoctoproject.org/2.5/overview-manual/overview-manual.html
+6.  http://simple-is-beauty.blogspot.com/2017/10/poky-vs-yocto-vs-openembedded.html
+7.  https://www.yoctoproject.org/development/technical-overview/
+8.  https://www.windriver.com/solutions/learning/yocto
+9.  https://kickstartembedded.com/2021/12/19/yocto-part-1-a-definitive-introduction/?amp=1
