@@ -1,7 +1,7 @@
 ## Table of Contents 
 
 - [**1. Revision**]()
-- [**2. YOCTO **]()
+- [**2. YOCTO**]()
   - [2.1. Advantages and Dis-Advantages of Yocto]()
   - [2.2. Yocto Main Components ]()
     - [2.2.1. OpenEmbedded (OE)]()
@@ -11,7 +11,7 @@
 - [**3. Yocto Terminologies** ]()
 - [**4. Yocto Project Work FLow** ]()
 - [**5. Install Yocto** ]()
-- [**References **]()
+- [**References**]()
 
 
 
@@ -79,7 +79,7 @@ We can image **Open Embedded Project** as an extension (Store) for additional la
 
 There are many Poky releases like : Dunfell, Styhead, Kirkstone ..etc. For more Info Read [YoctoReleases](https://wiki.yoctoproject.org/wiki/Releases).
 
-- [x] ####  The difference between Poky and OpenEmbedded 
+- [x] **The difference between Poky and OpenEmbedded** 
 
 - ##### History
 
@@ -171,7 +171,7 @@ With OpenEmbedded, you can define your own recipes, layers, and  configurations 
 
     - `site.conf` contains configuration settings specified by the user or system administrator, typically added via the `conf/site.conf` file.
 
-- **Layers **: contain collections of recipes, configuration files, and other metadata. Layer configuration files define relationships between layers, dependencies, and additional metadata specific to the layer. Layers provide a mechanism to isolate metadata according to functionality
+- **Layers**: contain collections of recipes, configuration files, and other metadata. Layer configuration files define relationships between layers, dependencies, and additional metadata specific to the layer. Layers provide a mechanism to isolate metadata according to functionality
 
   - **Base Layers** :
 
@@ -375,7 +375,7 @@ This means that developers can use the pre-built software packages available in 
   >
   >- **https://git.yoctoproject.org/git/poky.git**: This is the URL of the repository you want to clone. It starts with `https://` indicating that it's accessed over HTTP. `git.yoctoproject.org` is the domain of the server hosting the repository, `git` is the project name, and `poky.git` is the name of the repository.
 
-- **Setup Poky Environemt **
+- **Setup Poky Environemt**
 
   ```bash
   source oe-init-build-env
@@ -408,7 +408,7 @@ This means that developers can use the pre-built software packages available in 
 
 ![Screenshot_from_2024-02-23_11-21-07](README.assets/Screenshot_from_2024-02-23_11-21-07.png)
 
-- **Build Yocto Project **
+- **Build Yocto Project**
 
   ```bash
   bitbake -k core-image-minimal
