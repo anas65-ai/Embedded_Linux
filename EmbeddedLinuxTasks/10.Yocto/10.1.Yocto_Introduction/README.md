@@ -1,17 +1,17 @@
 ## Table of Contents 
+- [**1. Revision**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#1-recap)
+- [**2. YOCTO**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#2-yocto)
+  - [2.1. Advantages and Dis-Advantages of Yocto](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#21-advantages-and-dis-advantages-of-yocto)
+  - [2.2. Yocto Main Components ](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#22-yocto-main-components)
+    - [2.2.1. OpenEmbedded (OE)](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#221-openembedded-oe)
+    - [2.2.2. Poky](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#222-poky)
+    - [2.2.3. The difference between Yocto and OpenEmbedded ](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#the-difference-between-poky-and-openembedded)
+    - [2.2.4. Relation between Yocto, OpenEmbedded and Poky ](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#224-relation-between-yocto-openembedded-and-poky)
+- [**3. Yocto Terminologies** ](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#3-yocto-terminologies)
+- [**4. Yocto Project Work FLow** ](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#4-yocto-project-work-flow-to-generate-image)
+- [**5. Install Yocto** ](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#5-install-yocto-project)
+- [**References**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#references)
 
-- [**1. Revision**]()
-- [**2. YOCTO**]()
-  - [2.1. Advantages and Dis-Advantages of Yocto]()
-  - [2.2. Yocto Main Components ]()
-    - [2.2.1. OpenEmbedded (OE)]()
-    - [2.2.2. Poky]()
-    - [2.2.3. The difference between Yocto and OpenEmbedded ]()
-    - [2.2.4. Relation between Yocto, OpenEmbedded and Poky ]()
-- [**3. Yocto Terminologies** ]()
-- [**4. Yocto Project Work FLow** ]()
-- [**5. Install Yocto** ]()
-- [**References**]()
 
 
 
