@@ -79,7 +79,7 @@ We can image **Open Embedded Project** as an extension (Store) for additional la
 
 There are many Poky releases like : Dunfell, Styhead, Kirkstone ..etc. For more Info Read [YoctoReleases](https://wiki.yoctoproject.org/wiki/Releases).
 
-- [x] **The difference between Poky and OpenEmbedded** 
+### The difference between Poky and OpenEmbedded
 
 - ##### History
 
