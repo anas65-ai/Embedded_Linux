@@ -12,19 +12,19 @@
 
 After we installed **Yocto** [HERE](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction) ,Let's Navigate the **Poky** Folder
 
-![image-20240308001213856](/home/anas/snap/typora/86/.config/Typora/typora-user-images/image-20240308001213856.png)
+![image-20240308001213856](README.assets/image-20240308001213856.png)
 
 ### 1.1. Poky Directory
 
-![image-20240308002006150](/home/anas/snap/typora/86/.config/Typora/typora-user-images/image-20240308002006150.png)
+![image-20240308002006150](README.assets/image-20240308002006150.png)
 
 - **Bitbake**: This directory contains the BitBake tool such as scripts, which is the task execution engine used by the Yocto Project for building software. BitBake is responsible for parsing recipes, resolving dependencies, scheduling tasks, and executing the build process.
 
-  ![image-20240308002350601](/home/anas/snap/typora/86/.config/Typora/typora-user-images/image-20240308002350601.png)
+  ![image-20240308002350601](README.assets/image-20240308002350601.png)
 
 - **Build**: This directory is used to store the build output generated during the Yocto build process. It typically includes compiled binaries, package files, and other artifacts produced during the build.
 
-  ![image-20240308002423459](/home/anas/snap/typora/86/.config/Typora/typora-user-images/image-20240308002423459.png)
+  ![image-20240308002423459](README.assets/image-20240308002423459.png)
 
 - **Documentation**: This directory contains documentation files and resources related to the Yocto Project. It may include user guides, manuals, release notes, and other documentation to help users understand and use Yocto effectively.
 
