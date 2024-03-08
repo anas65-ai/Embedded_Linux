@@ -12,11 +12,9 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 1. Layers
+# 1. Create Layers
 
-To remember what is the Yocto Layers Read This [Part](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#3-yocto-terminologies)
-
-### 1.2. Create Layer
+To remember what is the Yocto Layers Read This [Part](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.1.Yocto_Introduction#3-yocto-terminologies) , But for create a layer follow the following steps:
 
 ```bash
 bitbake-layers create-layer <path/to/meta-layername>
@@ -54,11 +52,9 @@ Poky Created a reference of an example recipe in your layer and `layer.conf` fil
   bitbake-layers add-layer <path/to/meta-layername>
   ```
 
-  ```
+  ```bash
   bitbake-layers add-layer /home/anas/yocto/poky/meta-AnasLayer
   ```
-
-  
 
 - Make sure that the Layer Created 
 
@@ -67,3 +63,21 @@ Poky Created a reference of an example recipe in your layer and `layer.conf` fil
   ```
 
   ![image-20240309001817923](README.assets/image-20240309001817923.png)
+
+Also, go to `/home/anas/yocto/poky/build/conf` and open **bblayers.config** to see your new Layer.
+
+![](README.assets/BBLAYERS.drawio.svg)
+
+## 2. Create Recipe
+
+After you create a Layer, Poky will create a example of **Recipe** Automatically, you can use it or create your own recipes. But you should create your recipes into `recipes-example` directory, because **Bitbake** will search for recipes in directories start with `recipes-` 
+
+![](README.assets/BBLAYERS.drawio(1).svg)
+
+- Create Directory with any name in `recipes-example` 
+
+  ![image-20240309004007644](README.assets/image-20240309004007644.png)
+
+- Create a recipe file `.bb` 
+
+  
