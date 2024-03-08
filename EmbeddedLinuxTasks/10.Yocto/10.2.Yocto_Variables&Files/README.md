@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
-- [**1. Poky**]()
-- [**2. BitBake Variables**]()
-- [**3. Variable Assignment**]()
+- [**1. Poky**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.2.Yocto_Variables%26Files#1-poky)
+- [**2. BitBake Variables**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.2.Yocto_Variables%26Files#2-bitbake-variables)
+- [**3. Variable Assignment**](https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/10.Yocto/10.2.Yocto_Variables%26Files#3-variable-assignment)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
