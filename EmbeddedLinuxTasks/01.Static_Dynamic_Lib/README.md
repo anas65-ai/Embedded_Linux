@@ -554,7 +554,155 @@ source ~/.bashrc
 
 ![img](https://miro.medium.com/v2/resize:fit:700/1*R42c8GN6sltJY4hU-SqlWg.png)
 
-## 4. References 
+
+
+## 4.  Compilation
+
+### 4.1. Native Compilation
+
+Native compilation refers to the process of compiling source code directly on the target machine where the compiled program will be run. This approach is common in software development, particularly for software that is intended to run on the same platform (same architecture) where it is developed.
+
+### 4.2. Cross Compilation
+
+Cross-compiling is the process of compiling source code into executable binaries on a different platform (architecture or operating system) than the one where the code will eventually run. This is particularly useful for developing software for embedded systems, where the target device might not have the necessary resources (CPU power, memory, storage) to perform the compilation itself.
+
+### ![](README.assets/3-s2.0-B9780124114746000219-f21-03-9780124114746.jpg)
+
+### 4.2.1. glibc (GNU C Library)
+
+**glibc**, or the GNU C Library, is the most widely used C library on GNU/Linux systems. It provides the core libraries for the GNU system and GNU/Linux operating systems, offering essential APIs for system calls, basic data types, string handling, and more.
+
+####  Features:
+
+- **POSIX Compliance**: Fully compliant with the POSIX standard, ensuring compatibility with many Unix-like systems.
+- **Wide Adoption**: The default C library for many Linux distributions, including Debian, Ubuntu, Fedora, and Red Hat.
+- **Rich Functionality**: Provides a comprehensive set of APIs for file operations, process control, threading, and more.
+- **Internationalization**: Supports internationalization and localization, making it suitable for global software development.
+- **Dynamic Loading**: Supports dynamic loading of shared libraries (`dlopen`, `dlsym`).
+
+### 4.2.2. uClibc (micro C Library)
+
+**uClibc** is a smaller C library designed for embedded systems. It aims to be a smaller, lighter alternative to glibc, suitable for systems with limited resources.
+
+####  Features:
+
+- **Compact Size**: Much smaller footprint compared to glibc, making it ideal for embedded systems.
+- **POSIX Compliance**: Mostly POSIX compliant, although some features might be missing or simplified.
+- **Customizability**: Highly configurable, allowing developers to include only the components they need.
+- **Embedded Focus**: Optimized for use in embedded systems with limited CPU power, memory, and storage.
+- **Compatibility**: Supports a wide range of architectures, including ARM, MIPS, PowerPC, and more.
+
+### 2.2.3. musl (Lightweight C Library)
+
+**musl** is a lightweight, fast, and simple implementation of the standard C library, aiming for correctness, clarity, and portability. It's designed as an alternative to glibc and uClibc, particularly for static linking and small systems.
+
+####  Features:
+
+- **Efficiency**: Designed to be efficient in both memory usage and performance.
+- **Static Linking**: Highly optimized for static linking, reducing binary sizes.
+- **Simplicity**: Focuses on simplicity and minimalism, avoiding unnecessary complexity.
+- **Standard Compliance**: Adheres to POSIX and C99 standards, ensuring broad compatibility.
+- **Portability**: Supports various architectures and platforms, making it a good choice for cross-platform development.
+
+### Comparison
+
+- **Size**:
+  - **glibc**: Largest, with extensive functionality.
+  - **uClibc**: Smaller, designed for embedded systems.
+  - **musl**: Lightweight, focusing on simplicity and efficiency.
+- **Performance**:
+  - **glibc**: High performance but larger memory footprint.
+  - **uClibc**: Good performance for its size, optimized for embedded use.
+  - **musl**: Efficient and fast, particularly for static linking.
+- **Standards Compliance**:
+  - **glibc**: Fully POSIX compliant with extensive extensions.
+  - **uClibc**: Mostly POSIX compliant with some limitations.
+  - **musl**: POSIX and C99 compliant, with a focus on correctness.
+- **Use Cases**:
+  - **glibc**: General-purpose Linux systems with rich functionality requirements.
+  - **uClibc**: Embedded systems where memory and storage are limited.
+  - **musl**: Systems needing efficient static linking and small binary sizes, such as lightweight containers.
+
+
+
+### 4.2.4. crosstool-NG
+
+**crosstool-NG** is a versatile and highly configurable tool used for building cross-compilation toolchains. A cross-compilation toolchain allows developers to compile software on a host machine for a different target architecture or operating system. crosstool-NG simplifies the process of creating these toolchains, supporting a wide range of architectures and configurations.
+
+#### Features of crosstool-NG:
+
+1. **Configurability**: Allows extensive configuration options for the toolchain components, such as the compiler, C library, binutils, and more.
+2. **Support for Multiple Architectures**: Supports a variety of target architectures, including ARM, MIPS, PowerPC, x86, and many others.
+3. **Ease of Use**: Provides a user-friendly configuration interface (similar to the Linux kernel configuration) to help set up the toolchain.
+4. **Reproducibility**: Ensures that the same toolchain can be recreated consistently, which is important for debugging and maintaining build environments.
+5. **Integration**: Can be integrated into larger build systems and automated workflows.
+
+**Crosstool-NG Configurations**
+
+- Architecture Type
+
+- Compilation type (cross or native)
+
+- Libraries types (glibc - uclib - musl )
+
+- bin utilities :
+
+  >- gcc
+  >- ld
+  >- ldd
+  >- objdump
+  >- objcopy
+  >- strings
+  >- ar
+  >- strip
+  >- g++
+  >- strace
+  >- make
+  >- ....etc
+  >
+  >
+
+- Linux Kernel Headers
+- The compiler will run on OS or bare-metal 
+
+### 4.2.5. Install Crosstool NG
+
+- clone crosstool-ng repo
+
+- ./bootstrap
+
+- ./configure --enable-local
+
+- make
+
+- ./ct-ng
+
+- ./ct-ng list-samples
+
+- ./ct-ng cortex-a9
+
+- ./ct-ng menuconfig
+
+- Open the GUI and configure :
+
+- >- select the library
+  >- Gdb
+  >- strace
+  >- c++
+  >- make
+  >  - if you want to search about configuration in menuconfig **"write forward slash /"**
+
+- ./ct-ng build
+
+  
+
+**====================================================================================**
+
+**===================================== sooooon =======================================**
+
+**====================================================================================**
+
+##  References 
 
 1. https://omaryahia4444.medium.com/static-library-vs-dynamic-library-210f740fc014
 2. https://dev.to/iamkhalil42/all-you-need-to-know-about-c-static-libraries-1o0b
