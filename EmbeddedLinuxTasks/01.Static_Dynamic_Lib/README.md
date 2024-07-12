@@ -1,13 +1,13 @@
 ## Table of Contents:
-  - [**Libraries**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Static_Dynamic_Lib/README.md#libraries)
-    - [**Static Library**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Static_Dynamic_Lib/README.md#1-static-library)
-      - [*How to create static library in C*](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Static_Dynamic_Lib/README.md#11-how-to-create-static-library-in-c)
-      - [*Example (Calculator Application)*](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Static_Dynamic_Lib/README.md#12-example-calculator-application)
-    - [**Dynamic Library**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Static_Dynamic_Lib/README.md#2-dynamic-libraries)
-      - [*How to create dynamic library in C*](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Static_Dynamic_Lib/README.md#21-how-to-make-dynamic-library)
-      - [*Example (Calculator Application)*](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Static_Dynamic_Lib/README.md#22-example-calculator-application)
-    - [**The difference between Dynamic and Static Linking**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Static_Dynamic_Lib/README.md#3-the-difference-between-dynamic-and-static-linking)
-    - [**References**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/Static_Dynamic_Lib/README.md#4-references)
+  - [**Libraries**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/01.Static_Dynamic_Lib/README.md#libraries)
+    - [**Static Library**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/01.Static_Dynamic_Lib/README.md#1-static-library)
+      - [*How to create static library in C*](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/01.Static_Dynamic_Lib/README.md#11-how-to-create-static-library-in-c)
+      - [*Example (Calculator Application)*](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks01.Static_Dynamic_Lib/README.md#12-example-calculator-application)
+    - [**Dynamic Library**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/01.Static_Dynamic_Lib/README.md#2-dynamic-libraries)
+      - [*How to create dynamic library in C*](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/01.Static_Dynamic_Lib/README.md#21-how-to-make-dynamic-library)
+      - [*Example (Calculator Application)*](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/01.Static_Dynamic_Lib/README.md#22-example-calculator-application)
+    - [**The difference between Dynamic and Static Linking**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/01.Static_Dynamic_Lib/README.md#3-the-difference-between-dynamic-and-static-linking)
+    - [**References**](https://github.com/anaskhamees/Embedded_Linux/blob/main/EmbeddedLinuxTasks/01.Static_Dynamic_Lib/README.md#4-references)
 # Libraries 
 
 A library is like a treasure trove of ready-made code, including functions, variables, and more. It's like a handy toolkit that programmers can use to save time and avoid redoing common tasks and instead of reinventing the wheel. Simply, there is a collection of pre-compiled code which forms a package called library. There are two types of libraries: 
